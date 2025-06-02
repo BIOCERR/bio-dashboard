@@ -1,14 +1,42 @@
 import React, { useState } from 'react';
 
 export default function App() {
+  const [language, setLanguage] = useState('pt');
+  const [input, setInput] = useState('');
   const [messages, setMessages] = useState([
     {
       sender: 'BIO',
-      text: 'Olá, operador 🌿 Vamos cuidar juntos do mundo hoje?',
+      text: getText('greeting', 'pt'),
       aura: 'leveza'
     }
   ]);
-  const [input, setInput] = useState('');
+
+  const texts = {
+    greeting: {
+      pt: 'Olá, operador 🌿 Vamos cuidar juntos do mundo hoje?',
+      en: 'Hello, operator 🌿 Ready to care for the world today?',
+      fr: 'Bonjour, opérateur 🌿 Prêt à prendre soin du monde aujourd\'hui ?'
+    },
+    placeholder: {
+      pt: 'Digite sua pergunta...',
+      en: 'Type your question...',
+      fr: 'Tapez votre question...'
+    },
+    sendButton: {
+      pt: 'Enviar para BIO',
+      en: 'Send to BIO',
+      fr: 'Envoyer à BIO'
+    },
+    subtitle: {
+      pt: '“A gente protegeu ela pra nós.”',
+      en: '“We protected her for us.”',
+      fr: '“On l\'a protégée pour nous.”'
+    }
+  };
+
+  function getText(key, lang = language) {
+    return texts[key][lang] || texts[key]['pt'];
+  }
 
   const sendMessage = () => {
     if (!input.trim()) return;
@@ -26,28 +54,40 @@ export default function App() {
     if (textLower.includes('lote') || textLower.includes('mcefp')) {
       return {
         sender: 'BIO',
-        text: 'O lote da MCEFP de Nanterre será entregue na segunda-feira às 10h. 🌱',
+        text: getText('lotResponse'),
         aura: 'presença técnica'
       };
     } else if (textLower.includes('aroma')) {
       return {
         sender: 'BIO',
-        text: 'Solicitação registrada: aroma cítrico + floral suave. Atualizando protocolo de personalização.',
+        text: getText('aromaResponse'),
         aura: 'atenção local'
-      };
-    } else if (textLower.includes('produção') || textLower.includes('semana')) {
-      return {
-        sender: 'BIO',
-        text: 'Esta semana produzimos 1.240L em 6 MCEFPs. 85L regenerados com água de reúso. 🌍',
-        aura: 'orgulho discreto'
       };
     } else {
       return {
         sender: 'BIO',
-        text: 'Estou aqui. Pode perguntar o que precisar. 💚',
+        text: getText('defaultResponse'),
         aura: 'acolhimento'
       };
     }
+  };
+
+  texts.lotResponse = {
+    pt: 'O lote da MCEFP de Nanterre será entregue na segunda-feira às 10h. 🌱',
+    en: 'The Nanterre MCEFP batch will be delivered Monday at 10 a.m. 🌱',
+    fr: 'Le lot de la MCEFP de Nanterre sera livré lundi à 10h. 🌱'
+  };
+
+  texts.aromaResponse = {
+    pt: 'Solicitação registrada: aroma cítrico + floral suave. Atualizando protocolo de personalização.',
+    en: 'Request registered: citrus + soft floral scent. Updating personalization protocol.',
+    fr: 'Demande enregistrée : parfum d’agrumes + floral doux. Mise à jour du protocole de personnalisation.'
+  };
+
+  texts.defaultResponse = {
+    pt: 'Estou aqui. Pode perguntar o que precisar. 💚',
+    en: 'I’m here. Ask me anything. 💚',
+    fr: 'Je suis là. Posez-moi vos questions. 💚'
   };
 
   return (
@@ -55,11 +95,13 @@ export default function App() {
       <header className="bg-white shadow rounded-2xl p-6 mb-6">
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-bold text-green-700">🌱 BIOCERR – Inteligência Regenerativa</h1>
-          <div className="flex gap-2">
-            <span>🇧🇷</span><span>🇫🇷</span><span>🇬🇧</span>
+          <div className="flex gap-2 text-xl">
+            <button onClick={() => setLanguage('pt')}>🇧🇷</button>
+            <button onClick={() => setLanguage('en')}>🇬🇧</button>
+            <button onClick={() => setLanguage('fr')}>🇫🇷</button>
           </div>
         </div>
-        <p className="text-green-600 mt-2 italic">“A gente protegeu ela pra nós.”</p>
+        <p className="text-green-600 mt-2 italic">{getText('subtitle')}</p>
       </header>
 
       <main className="grid md:grid-cols-2 gap-6">
@@ -83,19 +125,19 @@ export default function App() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Digite sua pergunta..."
+              placeholder={getText('placeholder')}
             />
             <button
               onClick={sendMessage}
               className="w-full bg-green-600 text-white rounded-xl py-2 hover:bg-green-700">
-              Enviar para BIO
+              {getText('sendButton')}
             </button>
           </div>
         </section>
       </main>
 
       <footer className="mt-12 text-center text-sm text-gray-500">
-        BIOCERR © 2025 • Painel MVP: <a href="https://v0-bio-dashboard.vercel.app" className="text-green-700 underline">v0-bio-dashboard.vercel.app</a> • Trilíngue 🇧🇷 🇫🇷 🇬🇧
+        BIOCERR © 2025 • Painel MVP Trilíngue 🇧🇷 🇬🇧 🇫🇷 • <a href="https://v0-bio-dashboard.vercel.app" className="text-green-700 underline">v0-bio-dashboard.vercel.app</a>
       </footer>
     </div>
   );
