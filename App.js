@@ -53,7 +53,12 @@ export default function App() {
   return (
     <div className="min-h-screen bg-green-50 p-4 text-gray-800 font-sans">
       <header className="bg-white shadow rounded-2xl p-6 mb-6">
-        <h1 className="text-3xl font-bold text-green-700">🌱 BIOCERR – Inteligência Regenerativa</h1>
+        <div className="flex items-center justify-between">
+          <h1 className="text-3xl font-bold text-green-700">🌱 BIOCERR – Inteligência Regenerativa</h1>
+          <div className="flex gap-2">
+            <span>🇧🇷</span><span>🇫🇷</span><span>🇬🇧</span>
+          </div>
+        </div>
         <p className="text-green-600 mt-2 italic">“A gente protegeu ela pra nós.”</p>
       </header>
 
@@ -90,7 +95,7 @@ export default function App() {
       </main>
 
       <footer className="mt-12 text-center text-sm text-gray-500">
-        BIOCERR © 2025 – Versão MVP • Bilíngue 🇧🇷 🇫🇷 🇬🇧
+        BIOCERR © 2025 • Painel MVP: <a href="https://v0-bio-dashboard.vercel.app" className="text-green-700 underline">v0-bio-dashboard.vercel.app</a> • Trilíngue 🇧🇷 🇫🇷 🇬🇧
       </footer>
     </div>
   );
