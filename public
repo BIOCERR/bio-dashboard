@@ -1,1 +1,7 @@
+BIOCERR/
+├── public/
+│   └── manifesto.html
+├── src/
+├── app.js
+└── ...
 
