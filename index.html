@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIO – Simulador MVP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4fdf6;
+            color: #1a202c;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #2f855a;
+        }
+        label, input, select, button {
+            display: block;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        button {
+            background-color: #2f855a;
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .output {
+            background-color: #f0fff4;
+            border: 1px solid #c6f6d5;
+            padding: 1rem;
+            margin-top: 2rem;
+            border-radius: 8px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        .diagram {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .diagram img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 BIO – Simulador de Operação</h1>
+        <label for="produto">Produto:</label>
+        <select id="produto">
+            <option>Detergente Neutro</option>
+            <option>Desinfetante</option>
+            <option>Sabão Multiuso</option>
+        </select>
+
+        <label for="volume">Volume (em litros):</label>
+        <input type="number" id="volume" placeholder="Ex: 5">
+
+        <label for="local">Local da MCEFP:</label>
+        <input type="text" id="local" placeholder="Ex: Paris – 14e">
+
+        <button onclick="simularBIO()">Enviar para BIO 🌿</button>
+
+        <div class="output" id="respostaBIO"></div>
+
+        <div class="diagram">
+            <h2>🧠 Mapa de Operação da BIO</h2>
+            <img src="media/mapa-de-operacao.png" alt="Mapa de Operação da BIO">
+        </div>
+
+        <div class="footer">
+            <a href="manifesto.html">📄 Ver o Manifesto da BIOCERR</a>
+        </div>
+    </div>
+
+    <script>
+        function simularBIO() {
+            const produto = document.getElementById('produto').value;
+            const volume = document.getElementById('volume').value;
+            const local = document.getElementById('local').value;
+
+            const resposta = `BIO recebeu o pedido para <strong>${volume}L</strong> de <strong>${produto}</strong> na unidade <strong>${local}</strong>.<br><br>` +
+                `🌿 Analisando compatibilidade com estoque base...<br>` +
+                `🧪 Composição personalizada gerada com sucesso.<br>` +
+                `📦 Lote autorizado. Preparando na MCEFP.<br>` +
+                `<em>"A gente protegeu ela pra nós. Agora ela protege o mundo pra nós."</em>`;
+
+            document.getElementById('respostaBIO').innerHTML = resposta;
+        }
+    </script>
+</body>
+</html>
