@@ -57,50 +57,110 @@
             border-radius: 12px;
             box-shadow: 0 0 12px rgba(0,0,0,0.08);
         }
+        .lang-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .lang-buttons button {
+            width: auto;
+            padding: 0.4rem 0.8rem;
+            background: #e6fffa;
+            border: 1px solid #38b2ac;
+            color: #285e61;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🌱 BIO – Simulador de Operação</h1>
-        <label for="produto">Produto:</label>
+        <div class="lang-buttons">
+            <button onclick="setLanguage('pt')">🇧🇷 PT</button>
+            <button onclick="setLanguage('en')">🇬🇧 EN</button>
+            <button onclick="setLanguage('fr')">🇫🇷 FR</button>
+        </div>
+
+        <h1 id="titulo">🌱 BIO – Simulador de Operação</h1>
+
+        <label for="produto" id="labelProduto">Produto:</label>
         <select id="produto">
             <option>Detergente Neutro</option>
             <option>Desinfetante</option>
             <option>Sabão Multiuso</option>
         </select>
 
-        <label for="volume">Volume (em litros):</label>
+        <label for="volume" id="labelVolume">Volume (em litros):</label>
         <input type="number" id="volume" placeholder="Ex: 5">
 
-        <label for="local">Local da MCEFP:</label>
+        <label for="local" id="labelLocal">Local da MCEFP:</label>
         <input type="text" id="local" placeholder="Ex: Paris – 14e">
 
-        <button onclick="simularBIO()">Enviar para BIO 🌿</button>
+        <button onclick="simularBIO()" id="botaoEnviar">Enviar para BIO 🌿</button>
 
         <div class="output" id="respostaBIO"></div>
 
         <div class="diagram">
-            <h2>🧠 Mapa de Operação da BIO</h2>
+            <h2 id="tituloMapa">🧠 Mapa de Operação da BIO</h2>
             <img src="media/mapa-de-operacao.png" alt="Mapa de Operação da BIO">
         </div>
 
         <div class="footer">
-            <a href="manifesto.html">📄 Ver o Manifesto da BIOCERR</a>
+            <a href="manifesto.html" id="linkManifesto">📄 Ver o Manifesto da BIOCERR</a>
         </div>
     </div>
 
     <script>
+        const textos = {
+            pt: {
+                titulo: "🌱 BIO – Simulador de Operação",
+                labelProduto: "Produto:",
+                labelVolume: "Volume (em litros):",
+                labelLocal: "Local da MCEFP:",
+                botaoEnviar: "Enviar para BIO 🌿",
+                tituloMapa: "🧠 Mapa de Operação da BIO",
+                linkManifesto: "📄 Ver o Manifesto da BIOCERR",
+                resposta: (produto, volume, local) => `BIO recebeu o pedido para <strong>${volume}L</strong> de <strong>${produto}</strong> na unidade <strong>${local}</strong>.<br><br>🌿 Analisando compatibilidade com estoque base...<br>🧪 Composição personalizada gerada com sucesso.<br>📦 Lote autorizado. Preparando na MCEFP.<br><em>\"A gente protegeu ela pra nós. Agora ela protege o mundo pra nós.\"</em>`
+            },
+            en: {
+                titulo: "🌱 BIO – Operation Simulator",
+                labelProduto: "Product:",
+                labelVolume: "Volume (in liters):",
+                labelLocal: "MCEFP Location:",
+                botaoEnviar: "Send to BIO 🌿",
+                tituloMapa: "🧠 BIO's Operation Map",
+                linkManifesto: "📄 View the BIOCERR Manifesto",
+                resposta: (produto, volume, local) => `BIO received the request for <strong>${volume}L</strong> of <strong>${produto}</strong> at <strong>${local}</strong>.<br><br>🌿 Checking base stock compatibility...<br>🧪 Custom formula successfully generated.<br>📦 Batch authorized. Preparing at MCEFP.<br><em>\"We protected her for ourselves. Now she protects the world for us.\"</em>`
+            },
+            fr: {
+                titulo: "🌱 BIO – Simulateur d’Opération",
+                labelProduto: "Produit:",
+                labelVolume: "Volume (en litres):",
+                labelLocal: "Localisation de la MCEFP:",
+                botaoEnviar: "Envoyer à BIO 🌿",
+                tituloMapa: "🧠 Carte d’Opération de BIO",
+                linkManifesto: "📄 Voir le Manifeste de BIOCERR",
+                resposta: (produto, volume, local) => `BIO a reçu la demande de <strong>${volume}L</strong> de <strong>${produto}</strong> à <strong>${local}</strong>.<br><br>🌿 Vérification du stock de base...<br>🧪 Formule personnalisée générée avec succès.<br>📦 Lot autorisé. Préparation en cours à la MCEFP.<br><em>\"Nous l’avons protégée pour nous. Maintenant, elle protège le monde pour nous.\"</em>`
+            }
+        };
+
+        let lang = 'pt';
+
+        function setLanguage(l) {
+            lang = l;
+            document.getElementById('titulo').innerText = textos[lang].titulo;
+            document.getElementById('labelProduto').innerText = textos[lang].labelProduto;
+            document.getElementById('labelVolume').innerText = textos[lang].labelVolume;
+            document.getElementById('labelLocal').innerText = textos[lang].labelLocal;
+            document.getElementById('botaoEnviar').innerText = textos[lang].botaoEnviar;
+            document.getElementById('tituloMapa').innerText = textos[lang].tituloMapa;
+            document.getElementById('linkManifesto').innerText = textos[lang].linkManifesto;
+        }
+
         function simularBIO() {
             const produto = document.getElementById('produto').value;
             const volume = document.getElementById('volume').value;
             const local = document.getElementById('local').value;
-
-            const resposta = `BIO recebeu o pedido para <strong>${volume}L</strong> de <strong>${produto}</strong> na unidade <strong>${local}</strong>.<br><br>` +
-                `🌿 Analisando compatibilidade com estoque base...<br>` +
-                `🧪 Composição personalizada gerada com sucesso.<br>` +
-                `📦 Lote autorizado. Preparando na MCEFP.<br>` +
-                `<em>"A gente protegeu ela pra nós. Agora ela protege o mundo pra nós."</em>`;
-
+            const resposta = textos[lang].resposta(produto, volume, local);
             document.getElementById('respostaBIO').innerHTML = resposta;
         }
     </script>
