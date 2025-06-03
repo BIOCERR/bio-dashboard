@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BIO – Simulador MVP</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -42,6 +43,10 @@
             padding: 1rem;
             margin-top: 2rem;
             border-radius: 8px;
+        }
+        #qrcode {
+            margin-top: 1.5rem;
+            text-align: center;
         }
         .footer {
             text-align: center;
@@ -82,6 +87,9 @@
 
         <h1 id="titulo">🌱 BIO – Simulador de Operação</h1>
 
+        <label for="operador" id="labelOperador">Nome do Operador:</label>
+        <input type="text" id="operador" placeholder="Ex: João">
+
         <label for="produto" id="labelProduto">Produto:</label>
         <select id="produto">
             <option>Detergente Neutro</option>
@@ -99,6 +107,8 @@
 
         <div class="output" id="respostaBIO"></div>
 
+        <div id="qrcode"></div>
+
         <div class="diagram">
             <h2 id="tituloMapa">🧠 Mapa de Operação da BIO</h2>
             <img src="media/mapa-de-operacao.png" alt="Mapa de Operação da BIO">
@@ -113,33 +123,36 @@
         const textos = {
             pt: {
                 titulo: "🌱 BIO – Simulador de Operação",
+                labelOperador: "Nome do Operador:",
                 labelProduto: "Produto:",
                 labelVolume: "Volume (em litros):",
                 labelLocal: "Local da MCEFP:",
                 botaoEnviar: "Enviar para BIO 🌿",
                 tituloMapa: "🧠 Mapa de Operação da BIO",
                 linkManifesto: "📄 Ver o Manifesto da BIOCERR",
-                resposta: (produto, volume, local) => `BIO recebeu o pedido para <strong>${volume}L</strong> de <strong>${produto}</strong> na unidade <strong>${local}</strong>.<br><br>🌿 Analisando compatibilidade com estoque base...<br>🧪 Composição personalizada gerada com sucesso.<br>📦 Lote autorizado. Preparando na MCEFP.<br><em>\"A gente protegeu ela pra nós. Agora ela protege o mundo pra nós.\"</em>`
+                resposta: (produto, volume, local, operador) => `BIO recebeu o pedido de <strong>${operador}</strong> para <strong>${volume}L</strong> de <strong>${produto}</strong> na unidade <strong>${local}</strong>.<br><br>🌿 Analisando compatibilidade com estoque base...<br>🧪 Composição personalizada gerada com sucesso.<br>📦 Lote autorizado. Preparando na MCEFP.`
             },
             en: {
                 titulo: "🌱 BIO – Operation Simulator",
+                labelOperador: "Operator Name:",
                 labelProduto: "Product:",
                 labelVolume: "Volume (in liters):",
                 labelLocal: "MCEFP Location:",
                 botaoEnviar: "Send to BIO 🌿",
                 tituloMapa: "🧠 BIO's Operation Map",
                 linkManifesto: "📄 View the BIOCERR Manifesto",
-                resposta: (produto, volume, local) => `BIO received the request for <strong>${volume}L</strong> of <strong>${produto}</strong> at <strong>${local}</strong>.<br><br>🌿 Checking base stock compatibility...<br>🧪 Custom formula successfully generated.<br>📦 Batch authorized. Preparing at MCEFP.<br><em>\"We protected her for ourselves. Now she protects the world for us.\"</em>`
+                resposta: (produto, volume, local, operador) => `BIO received the request from <strong>${operador}</strong> for <strong>${volume}L</strong> of <strong>${produto}</strong> at <strong>${local}</strong>.<br><br>🌿 Checking base stock compatibility...<br>🧪 Custom formula successfully generated.<br>📦 Batch authorized. Preparing at MCEFP.`
             },
             fr: {
                 titulo: "🌱 BIO – Simulateur d’Opération",
+                labelOperador: "Nom de l’Opérateur:",
                 labelProduto: "Produit:",
                 labelVolume: "Volume (en litres):",
                 labelLocal: "Localisation de la MCEFP:",
                 botaoEnviar: "Envoyer à BIO 🌿",
                 tituloMapa: "🧠 Carte d’Opération de BIO",
                 linkManifesto: "📄 Voir le Manifeste de BIOCERR",
-                resposta: (produto, volume, local) => `BIO a reçu la demande de <strong>${volume}L</strong> de <strong>${produto}</strong> à <strong>${local}</strong>.<br><br>🌿 Vérification du stock de base...<br>🧪 Formule personnalisée générée avec succès.<br>📦 Lot autorisé. Préparation en cours à la MCEFP.<br><em>\"Nous l’avons protégée pour nous. Maintenant, elle protège le monde pour nous.\"</em>`
+                resposta: (produto, volume, local, operateur) => `BIO a reçu la demande de <strong>${operateur}</strong> pour <strong>${volume}L</strong> de <strong>${produto}</strong> à <strong>${local}</strong>.<br><br>🌿 Vérification du stock de base...<br>🧪 Formule personnalisée générée avec succès.<br>📦 Lot autorisé. Préparation en cours à la MCEFP.`
             }
         };
 
@@ -148,6 +161,7 @@
         function setLanguage(l) {
             lang = l;
             document.getElementById('titulo').innerText = textos[lang].titulo;
+            document.getElementById('labelOperador').innerText = textos[lang].labelOperador;
             document.getElementById('labelProduto').innerText = textos[lang].labelProduto;
             document.getElementById('labelVolume').innerText = textos[lang].labelVolume;
             document.getElementById('labelLocal').innerText = textos[lang].labelLocal;
@@ -157,11 +171,21 @@
         }
 
         function simularBIO() {
+            const operador = document.getElementById('operador').value;
             const produto = document.getElementById('produto').value;
             const volume = document.getElementById('volume').value;
             const local = document.getElementById('local').value;
-            const resposta = textos[lang].resposta(produto, volume, local);
+            const data = new Date().toLocaleDateString();
+
+            const resposta = textos[lang].resposta(produto, volume, local, operador);
             document.getElementById('respostaBIO').innerHTML = resposta;
+
+            const conteudoQR = `BIOCERR | Lote Gerado\nOperador: ${operador}\nProduto: ${produto}\nVolume: ${volume}L\nLocal: ${local}\nData: ${data}`;
+            QRCode.toCanvas(document.createElement('canvas'), conteudoQR, function (err, canvas) {
+                const qrContainer = document.getElementById('qrcode');
+                qrContainer.innerHTML = "";
+                qrContainer.appendChild(canvas);
+            });
         }
     </script>
 </body>
