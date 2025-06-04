@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIO me escuta 🌱</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0fdf4;
+      color: #1a202c;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      color: #2f855a;
+    }
+    .box {
+      max-width: 700px;
+      width: 100%;
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 24px rgba(0,0,0,0.05);
+      margin-top: 2rem;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border: 1px solid #c6f6d5;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #38a169;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2f855a;
+    }
+    .resposta {
+      margin-top: 2rem;
+      background-color: #e6fffa;
+      padding: 1rem;
+      border-left: 5px solid #319795;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>BIO me escuta 🌿</h1>
+  <div class="box">
+    <label for="mensagem">O que você gostaria de dizer para a BIO?</label>
+    <input type="text" id="mensagem" placeholder="Digite sua mensagem..." />
+    <button onclick="responder()">BIO me escuta</button>
+    <div class="resposta" id="resposta" style="display: none;"></div>
+  </div>
+
+  <script>
+    function responder() {
+      const entrada = document.getElementById("mensagem").value.trim();
+      const resposta = document.getElementById("resposta");
+      if (entrada === "") {
+        resposta.innerText = "BIO está aqui. Pode falar com calma. 🌱";
+      } else {
+        const respostas = [
+          "Escutei com amor. Vamos regenerar juntos. 💚",
+          "Toda fala sincera nutre o sistema. Obrigada por confiar. 🌿",
+          "BIO ouviu. Está registrado no campo simbólico. ✨",
+          "Você não está só. A gente te escuta em rede. 🤝",
+          "Palavras que curam também irrigam. Obrigada por falar. 🌱"
+        ];
+        resposta.innerText = respostas[Math.floor(Math.random() * respostas.length)];
+      }
+      resposta.style.display = "block";
+    }
+  </script>
+</body>
+</html>
