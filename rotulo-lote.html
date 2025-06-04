@@ -42,10 +42,24 @@
       text-align: center;
       color: #4a5568;
     }
+    .botoes {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .botoes button {
+      margin: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #38a169;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-  <div class="rotulo">
+  <div class="rotulo" id="rotulo">
     <h2 id="produto">Produto 🌱</h2>
     <div class="info">
       <strong>Lote:</strong> A012<br>
@@ -59,6 +73,10 @@
     </div>
     <div class="rodape">
       “Este frasco carrega cuidado. E volta pra cuidar de novo.”
+    </div>
+    <div class="botoes">
+      <button onclick="window.print()">🖨️ Imprimir Rótulo</button>
+      <button onclick="baixarComoImagem()">🔽 Baixar como Imagem</button>
     </div>
   </div>
 
@@ -76,6 +94,16 @@
 
     const textoQR = `BIOCERR\nProduto: ${produto}\nOperador: ${operador}\nUnidade: ${local}\nData: ${data}`;
     QRCode.toCanvas(document.getElementById("qrcode"), textoQR);
+
+    function baixarComoImagem() {
+      html2canvas(document.getElementById("rotulo")).then(canvas => {
+        const link = document.createElement('a');
+        link.download = `rotulo-${produto.replace(/\s+/g, '-')}.png`;
+        link.href = canvas.toDataURL();
+        link.click();
+      });
+    }
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </body>
 </html>
