@@ -1,206 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BIO – Simulador MVP</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rótulo do Lote – BIOCERR</title>
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4fdf6;
-      color: #1a202c;
-      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7fafc;
+      color: #2d3748;
       padding: 2rem;
+      display: flex;
+      justify-content: center;
     }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: #ffffff;
+    .rotulo {
+      width: 400px;
+      border: 2px dashed #38a169;
       border-radius: 16px;
       padding: 2rem;
-      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      background: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      position: relative;
     }
-    h1 {
+    h2 {
+      text-align: center;
       color: #2f855a;
     }
-    label, input, select, button {
-      display: block;
-      width: 100%;
-      margin: 1rem 0;
-    }
-    button {
-      background-color: #2f855a;
-      color: white;
-      border: none;
-      padding: 0.75rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .output {
-      background-color: #f0fff4;
-      border: 1px solid #c6f6d5;
-      padding: 1rem;
-      margin-top: 2rem;
-      border-radius: 8px;
-    }
-    #qrcode {
-      margin-top: 1.5rem;
-      text-align: center;
-    }
-    .footer {
-      text-align: center;
-      margin-top: 4rem;
-      font-size: 0.9rem;
-    }
-    .diagram {
-      margin-top: 2rem;
-      text-align: center;
-    }
-    .diagram img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.08);
-    }
-    .lang-buttons {
-      display: flex;
-      justify-content: flex-end;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    .lang-buttons button {
-      width: auto;
-      padding: 0.4rem 0.8rem;
-      background: #e6fffa;
-      border: 1px solid #38b2ac;
-      color: #285e61;
-    }
-    #botaoRotulo {
-      display: none;
+    .info {
       margin-top: 1rem;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .qr {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .rodape {
+      margin-top: 2rem;
+      font-style: italic;
+      text-align: center;
+      color: #4a5568;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="lang-buttons">
-      <button onclick="setLanguage('pt')">🇧🇷 PT</button>
-      <button onclick="setLanguage('en')">🇬🇧 EN</button>
-      <button onclick="setLanguage('fr')">🇫🇷 FR</button>
+  <div class="rotulo">
+    <h2 id="produto">Produto 🌱</h2>
+    <div class="info">
+      <strong>Lote:</strong> A012<br>
+      <strong>Operador:</strong> <span id="operador"></span><br>
+      <strong>Unidade:</strong> <span id="local"></span><br>
+      <strong>Data:</strong> <span id="data"></span><br>
+      <strong>Código:</strong> regenerar-05
     </div>
-
-    <h1 id="titulo">🌱 BIO – Simulador de Operação</h1>
-
-    <label for="operador" id="labelOperador">Nome do Operador:</label>
-    <input type="text" id="operador" placeholder="Ex: João">
-
-    <label for="produto" id="labelProduto">Produto:</label>
-    <select id="produto">
-      <option>Detergente Neutro</option>
-      <option>Desinfetante</option>
-      <option>Sabão Multiuso</option>
-    </select>
-
-    <label for="volume" id="labelVolume">Volume (em litros):</label>
-    <input type="number" id="volume" placeholder="Ex: 5">
-
-    <label for="local" id="labelLocal">Local da MCEFP:</label>
-    <input type="text" id="local" placeholder="Ex: Paris – 14e">
-
-    <button onclick="simularBIO()" id="botaoEnviar">Enviar para BIO 🌿</button>
-    <button onclick="visualizarRotulo()" id="botaoRotulo">🎫 Visualizar Rótulo do Lote</button>
-
-    <div class="output" id="respostaBIO"></div>
-    <div id="qrcode"></div>
-
-    <div class="diagram">
-      <h2 id="tituloMapa">🧠 Mapa de Operação da BIO</h2>
-      <img src="media/mapa-de-operacao.png" alt="Mapa de Operação da BIO">
+    <div class="qr">
+      <canvas id="qrcode"></canvas>
     </div>
-
-    <div class="footer">
-      <a href="manifesto.html" id="linkManifesto">📄 Ver o Manifesto da BIOCERR</a>
+    <div class="rodape">
+      “Este frasco carrega cuidado. E volta pra cuidar de novo.”
     </div>
   </div>
 
   <script>
-    const textos = {
-      pt: {
-        titulo: "🌱 BIO – Simulador de Operação",
-        labelOperador: "Nome do Operador:",
-        labelProduto: "Produto:",
-        labelVolume: "Volume (em litros):",
-        labelLocal: "Local da MCEFP:",
-        botaoEnviar: "Enviar para BIO 🌿",
-        tituloMapa: "🧠 Mapa de Operação da BIO",
-        linkManifesto: "📄 Ver o Manifesto da BIOCERR",
-        resposta: (produto, volume, local, operador) => `BIO recebeu o pedido de <strong>${operador}</strong> para <strong>${volume}L</strong> de <strong>${produto}</strong> na unidade <strong>${local}</strong>.<br><br>🌿 Analisando compatibilidade com estoque base...<br>🧪 Composição personalizada gerada com sucesso.<br>📦 Lote autorizado. Preparando na MCEFP.`
-      },
-      en: {
-        titulo: "🌱 BIO – Operation Simulator",
-        labelOperador: "Operator Name:",
-        labelProduto: "Product:",
-        labelVolume: "Volume (in liters):",
-        labelLocal: "MCEFP Location:",
-        botaoEnviar: "Send to BIO 🌿",
-        tituloMapa: "🧠 BIO's Operation Map",
-        linkManifesto: "📄 View the BIOCERR Manifesto",
-        resposta: (produto, volume, local, operador) => `BIO received the request from <strong>${operador}</strong> for <strong>${volume}L</strong> of <strong>${produto}</strong> at <strong>${local}</strong>.<br><br>🌿 Checking base stock compatibility...<br>🧪 Custom formula successfully generated.<br>📦 Batch authorized. Preparing at MCEFP.`
-      },
-      fr: {
-        titulo: "🌱 BIO – Simulateur d’Opération",
-        labelOperador: "Nom de l’Opérateur:",
-        labelProduto: "Produit:",
-        labelVolume: "Volume (en litres):",
-        labelLocal: "Localisation de la MCEFP:",
-        botaoEnviar: "Envoyer à BIO 🌿",
-        tituloMapa: "🧠 Carte d’Opération de BIO",
-        linkManifesto: "📄 Voir le Manifeste de BIOCERR",
-        resposta: (produto, volume, local, operateur) => `BIO a reçu la demande de <strong>${operateur}</strong> pour <strong>${volume}L</strong> de <strong>${produto}</strong> à <strong>${local}</strong>.<br><br>🌿 Vérification du stock de base...<br>🧪 Formule personnalisée générée avec succès.<br>📦 Lot autorisé. Préparation en cours à la MCEFP.`
-      }
-    };
+    const params = new URLSearchParams(window.location.search);
+    const produto = params.get('produto') || 'Sabão Multiuso';
+    const operador = params.get('operador') || 'Operador X';
+    const local = params.get('local') || 'MCEFP-001';
+    const data = params.get('data') || new Date().toLocaleDateString();
 
-    let lang = 'pt';
-    let dadosLote = {};
+    document.getElementById("produto").innerText = produto + " 🌱";
+    document.getElementById("operador").innerText = operador;
+    document.getElementById("local").innerText = local;
+    document.getElementById("data").innerText = data;
 
-    function setLanguage(l) {
-      lang = l;
-      document.getElementById('titulo').innerText = textos[lang].titulo;
-      document.getElementById('labelOperador').innerText = textos[lang].labelOperador;
-      document.getElementById('labelProduto').innerText = textos[lang].labelProduto;
-      document.getElementById('labelVolume').innerText = textos[lang].labelVolume;
-      document.getElementById('labelLocal').innerText = textos[lang].labelLocal;
-      document.getElementById('botaoEnviar').innerText = textos[lang].botaoEnviar;
-      document.getElementById('tituloMapa').innerText = textos[lang].tituloMapa;
-      document.getElementById('linkManifesto').innerText = textos[lang].linkManifesto;
-    }
-
-    function simularBIO() {
-      const operador = document.getElementById('operador').value;
-      const produto = document.getElementById('produto').value;
-      const volume = document.getElementById('volume').value;
-      const local = document.getElementById('local').value;
-      const data = new Date().toLocaleDateString();
-
-      dadosLote = { operador, produto, volume, local, data };
-
-      const resposta = textos[lang].resposta(produto, volume, local, operador);
-      document.getElementById('respostaBIO').innerHTML = resposta;
-
-      const conteudoQR = `BIOCERR | Lote Gerado\nOperador: ${operador}\nProduto: ${produto}\nVolume: ${volume}L\nLocal: ${local}\nData: ${data}`;
-      QRCode.toCanvas(document.createElement('canvas'), conteudoQR, function (err, canvas) {
-        const qrContainer = document.getElementById('qrcode');
-        qrContainer.innerHTML = "";
-        qrContainer.appendChild(canvas);
-      });
-
-      document.getElementById('botaoRotulo').style.display = 'block';
-    }
-
-    function visualizarRotulo() {
-      const query = new URLSearchParams(dadosLote).toString();
-      window.open(`rotulo-lote.html?${query}`, '_blank');
-    }
+    const textoQR = `BIOCERR\nProduto: ${produto}\nOperador: ${operador}\nUnidade: ${local}\nData: ${data}`;
+    QRCode.toCanvas(document.getElementById("qrcode"), textoQR);
   </script>
 </body>
 </html>
