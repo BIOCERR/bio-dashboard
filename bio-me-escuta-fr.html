@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BIO m’écoute 🌱</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIO m'écoute 🌱</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -15,15 +15,6 @@
       flex-direction: column;
       align-items: center;
     }
-    nav {
-      margin-bottom: 2rem;
-    }
-    nav a {
-      margin: 0 0.5rem;
-      text-decoration: none;
-      color: #2f855a;
-      font-weight: bold;
-    }
     h1 {
       color: #2f855a;
     }
@@ -34,7 +25,7 @@
       padding: 2rem;
       border-radius: 16px;
       box-shadow: 0 0 24px rgba(0,0,0,0.05);
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
     input[type="text"] {
       width: 100%;
@@ -63,40 +54,53 @@
       border-left: 5px solid #319795;
       border-radius: 8px;
     }
+    nav {
+      margin-bottom: 1rem;
+    }
+    nav a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #2f855a;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+
   <nav>
     <a href="bio-me-escuta.html">🇧🇷 Português</a> |
-    <a href="bio-me-escuta-en.html">🇺🇸 English</a> |
+    <a href="bio-me-escuta-en.html">🇬🇧 English</a> |
     <a href="bio-me-escuta-fr.html">🇫🇷 Français</a>
   </nav>
 
-  <h1>BIO m’écoute 🌿</h1>
+  <h1>BIO m'écoute 🌿</h1>
   <div class="box">
     <label for="mensagem">Que souhaitez-vous dire à BIO ?</label>
-    <input type="text" id="mensagem" placeholder="Écrivez votre message..." />
-    <button onclick="responder()">BIO m’écoute</button>
+    <input type="text" id="mensagem" placeholder="Tapez votre message..." />
+    <button onclick="responder()">BIO m'écoute</button>
     <div class="resposta" id="resposta" style="display: none;"></div>
   </div>
 
   <script>
     function responder() {
-      const entrada = document.getElementById("mensagem").value.trim();
-      const resposta = document.getElementById("resposta");
-      if (entrada === "") {
-        resposta.innerText = "BIO est là. Vous pouvez parler calmement. 🌱";
+      const entree = document.getElementById("mensagem").value.trim();
+      const reponse = document.getElementById("resposta");
+      if (entree === "") {
+        reponse.innerText = "BIO est là. Vous pouvez parler calmement. 🌱";
       } else {
-        const respostas = [
-          "J’ai écouté avec amour. Régénérons ensemble. 💚",
-          "Chaque mot sincère nourrit le système. Merci pour votre confiance. 🌿",
-          "BIO vous a entendu. C’est enregistré dans le champ symbolique. ✨",
-          "Vous n’êtes pas seul. On vous écoute en réseau. 🤝",
-          "Les mots qui soignent nourrissent aussi. Merci de vous exprimer. 🌱"
+        const reponses = [
+          "J'ai écouté avec amour. Régénérons ensemble. 💚",
+          "Chaque parole sincère nourrit le système. Merci de votre confiance. 🌿",
+          "BIO a écouté. C'est enregistré dans le champ symbolique. ✨",
+          "Vous n'êtes pas seul. Nous vous écoutons en réseau. 🤝",
+          "Les mots qui guérissent irriguent aussi. Merci de parler. 🌱"
         ];
-        resposta.innerText = respostas[Math.floor(Math.random() * respostas.length)];
+        reponse.innerText = reponses[Math.floor(Math.random() * reponses.length)];
       }
-      resposta.style.display = "block";
+      reponse.style.display = "block";
     }
   </script>
 </body>
