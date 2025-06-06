@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>BIO – Simulador MVP</title>
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
     <style>
@@ -36,6 +36,10 @@
             padding: 0.75rem;
             border-radius: 8px;
             cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #276749;
         }
         .output {
             background-color: #f0fff4;
@@ -74,6 +78,9 @@
             background: #e6fffa;
             border: 1px solid #38b2ac;
             color: #285e61;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -88,7 +95,7 @@
         <h1 id="titulo">🌱 BIO – Simulador de Operação</h1>
 
         <label for="operador" id="labelOperador">Nome do Operador:</label>
-        <input type="text" id="operador" placeholder="Ex: João">
+        <input type="text" id="operador" placeholder="Ex: João" />
 
         <label for="produto" id="labelProduto">Produto:</label>
         <select id="produto">
@@ -98,10 +105,10 @@
         </select>
 
         <label for="volume" id="labelVolume">Volume (em litros):</label>
-        <input type="number" id="volume" placeholder="Ex: 5">
+        <input type="number" id="volume" placeholder="Ex: 5" />
 
         <label for="local" id="labelLocal">Local da MCEFP:</label>
-        <input type="text" id="local" placeholder="Ex: Paris – 14e">
+        <input type="text" id="local" placeholder="Ex: Paris – 14e" />
 
         <button onclick="simularBIO()" id="botaoEnviar">Enviar para BIO 🌿</button>
 
@@ -111,7 +118,7 @@
 
         <div class="diagram">
             <h2 id="tituloMapa">🧠 Mapa de Operação da BIO</h2>
-            <img src="media/mapa-de-operacao.png" alt="Mapa de Operação da BIO">
+            <img src="media/mapa-de-operacao.png" alt="Mapa de Operação da BIO" />
         </div>
 
         <div class="footer">
