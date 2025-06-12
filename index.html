@@ -1,57 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BIOCERR · Página Principal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIOCERR — Início</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f7fafc;
-      color: #2d3748;
       margin: 0;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e6ffe6, #f0fff4);
+      color: #222;
     }
-    h1 {
-      color: #2b6cb0;
+    header {
+      background-color: #043927;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+    nav {
+      background-color: #ffffffee;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: #043927;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #d0f2e1;
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .hero h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
     }
-    li {
-      margin: 0.5rem 0;
-    }
-    a {
-      color: #3182ce;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #f3f3f3;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <h1>🌱 BIOCERR · Navegação</h1>
-  <ul>
-    <li><a href="manifesto.html">📜 Manifesto</a></li>
-    <li><a href="bio-me-escuta.html">🧠 BIO me escuta</a></li>
-    <li><a href="simulador.html">🧪 Simulador</a></li>
-    <li><a href="rotulo-lado-b.html">🧾 Rótulo Lado B</a></li>
-    <li><a href="rotulo-lote.html">🔁 Rótulo Lote</a></li>
-    <li><a href="dashboard-matriz.html">🏭 Dashboard Matriz</a></li>
-    <li><a href="painel-matriz.html">📊 Painel Matriz</a></li>
-    <li><a href="painel-mcefp.html">🧪 Painel MCEFP</a></li>
-    <li><a href="pitch/index.html">🌍 Pitch (Escolha de idioma)</a></li>
-  </ul>
+  <header>
+    <h1>BIOCERR</h1>
+    <p>Produção descentralizada regenerativa 🌱 Invenção validada globalmente</p>
+  </header>
+
+  <nav>
+    <a href="manifesto.html">Manifesto</a>
+    <a href="painel-matriz.html">Indústria Matriz</a>
+    <a href="painel-mcefp.html">MCEFPs</a>
+    <a href="dashboard-matriz.html">Dashboard</a>
+    <a href="bio-me-escuta.html">BIO me escuta</a>
+    <a href="simulador.html">Simulador</a>
+    <a href="rotulo-lote.html">Rótulo</a>
+    <a href="pitch/index.html">Pitch</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Disrupção não é um caminho. É um chamado.</h2>
+    <p>Desde 2015, a BIOCERR desenvolve soluções reais para a produção regenerativa de produtos essenciais. Nossa tecnologia é validada, protegida e pronta para transformar o mundo. Conheça o Sistema Modular de Produção Descentralizada (SMPD).</p>
+  </section>
+
+  <footer>
+    &copy; 2015–2025 BIOCERR — Todos os direitos reservados<br>
+    Desenvolvido com 🌿 no Cerrado brasileiro, rumo ao mundo.
+  </footer>
 </body>
 </html>
-
