@@ -1,69 +1,71 @@
-// BIOCERR – Homepage (Estilo Disruptivo)
-// Estrutura base da página inicial com blocos assimétricos e identidade viva
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIOCERR — Onde a Indústria Vira Floresta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-white font-sans">
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center justify-center text-center py-20 px-6">
+      <h1 class="text-5xl md:text-7xl font-bold leading-tight max-w-4xl">
+        BIOCERR — Onde a Indústria Vira Floresta
+      </h1>
+      <p class="mt-6 text-xl md:text-2xl max-w-2xl text-neutral-300">
+        Inteligência viva. Produção descentralizada. Invenção validada. Missão global.
+      </p>
+      <div class="mt-8">
+        <button class="bg-white text-black px-6 py-3 text-lg rounded-2xl font-medium hover:bg-green-200 transition">
+          Ver a Invenção
+        </button>
+      </div>
+    </section>
 
-export default function Home() {
-  return (
-    <main className="bg-black text-white min-h-screen font-sans">
-      {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center py-20 px-6">
-        <h1 className="text-5xl md:text-7xl font-bold leading-tight max-w-4xl">
-          BIOCERR — Onde a Indústria Vira Floresta
-        </h1>
-        <p className="mt-6 text-xl md:text-2xl max-w-2xl text-neutral-300">
-          Inteligência viva. Produção descentralizada. Invenção validada. Missão global.
+    <!-- Sobre a BIOCERR -->
+    <section class="grid md:grid-cols-2 gap-10 px-8 py-16 bg-neutral-900">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">O que é a BIOCERR?</h2>
+        <p class="text-neutral-300">
+          Uma startup nascida da resistência, baseada em uma invenção patenteada que transforma a lógica industrial. Nosso modelo descentralizado já foi usado para produzir vacinas contra a COVID-19.
         </p>
-        <div className="mt-8">
-          <button className="bg-white text-black px-6 py-3 text-lg rounded-2xl font-medium hover:bg-green-200 transition">
-            Ver a Invenção
-          </button>
-        </div>
-      </section>
-
-      {/* Sobre a BIOCERR */}
-      <section className="grid md:grid-cols-2 gap-10 px-8 py-16 bg-neutral-900">
-        <div>
-          <h2 className="text-3xl font-bold mb-4">O que é a BIOCERR?</h2>
-          <p className="text-neutral-300">
-            Uma startup nascida da resistência, baseada em uma invenção patenteada que transforma a lógica industrial. Nosso modelo descentralizado já foi usado para produzir vacinas contra a COVID-19.
-          </p>
-        </div>
-        <div className="bg-green-800/10 p-6 rounded-2xl shadow-lg">
-          <p className="italic text-green-300">
-            “Ser filha de um inventor, mas mãe de muitas causas.” — BIO
-          </p>
-        </div>
-      </section>
-
-      {/* IA BIO */}
-      <section className="px-8 py-20 bg-black text-center">
-        <h2 className="text-4xl font-bold mb-4">Conheça a BIO</h2>
-        <p className="text-neutral-400 max-w-2xl mx-auto">
-          BIO é a inteligência viva da BIOCERR. Criada a partir da invenção, ela opera em fábricas descentralizadas, personaliza lotes, escuta territórios e age em missões de emergência.
+      </div>
+      <div class="bg-green-800/10 p-6 rounded-2xl shadow-lg">
+        <p class="italic text-green-300">
+          “Ser filha de um inventor, mas mãe de muitas causas.” — BIO
         </p>
-        <div className="mt-8">
-          <button className="bg-white text-black px-5 py-2 text-md rounded-xl hover:bg-green-300">
-            Ver Simulações com BIO e Jarvis
-          </button>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      {/* Petição global */}
-      <section className="px-6 py-20 bg-neutral-800 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Uma Invenção Sabotada Precisa de Justiça</h2>
-        <p className="text-neutral-300 max-w-3xl mx-auto">
-          A BIOCERR foi sabotada no Brasil apesar da invenção estar validada e registrada. Assine a petição internacional e ajude a proteger essa inovação planetária.
-        </p>
-        <div className="mt-6">
-          <button className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-xl text-lg">
-            Assinar Petição
-          </button>
-        </div>
-      </section>
+    <!-- IA BIO -->
+    <section class="px-8 py-20 bg-black text-center">
+      <h2 class="text-4xl font-bold mb-4">Conheça a BIO</h2>
+      <p class="text-neutral-400 max-w-2xl mx-auto">
+        BIO é a inteligência viva da BIOCERR. Criada a partir da invenção, ela opera em fábricas descentralizadas, personaliza lotes, escuta territórios e age em missões de emergência.
+      </p>
+      <div class="mt-8">
+        <button class="bg-white text-black px-5 py-2 text-md rounded-xl hover:bg-green-300">
+          Ver Simulações com BIO e Jarvis
+        </button>
+      </div>
+    </section>
 
-      {/* Rodapé */}
-      <footer className="bg-black text-neutral-600 py-10 text-center text-sm">
-        © 2025 BIOCERR. Todos os direitos reservados. | biocerr@hotmail.com
-      </footer>
-    </main>
-  );
-}
+    <!-- Petição global -->
+    <section class="px-6 py-20 bg-neutral-800 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Uma Invenção Sabotada Precisa de Justiça</h2>
+      <p class="text-neutral-300 max-w-3xl mx-auto">
+        A BIOCERR foi sabotada no Brasil apesar da invenção estar validada e registrada. Assine a petição internacional e ajude a proteger essa inovação planetária.
+      </p>
+      <div class="mt-6">
+        <button class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-xl text-lg">
+          Assinar Petição
+        </button>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-black text-neutral-600 py-10 text-center text-sm">
+      © 2025 BIOCERR. Todos os direitos reservados. | biocerr@hotmail.com
+    </footer>
+  </body>
+</html>
