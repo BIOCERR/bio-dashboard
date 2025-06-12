@@ -3,123 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BIOCERR — Início</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f5f5f5;
-      color: #1d1d1d;
-    }
-    header {
-      background-color: #003d1f;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-    nav {
-      background-color: #004c26;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #aaffcc;
-    }
-    main {
-      padding: 2rem;
-      max-width: 960px;
-      margin: auto;
-    }
-    .modules-section {
-      background-color: #e6f5ec;
-      padding: 2rem;
-      margin-top: 2rem;
-      border-radius: 10px;
-    }
-    .module-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .module {
-      background: white;
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-    .module a {
-      color: #004c26;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .module a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #003d1f;
-      color: white;
-      margin-top: 4rem;
-    }
-  </style>
+  <title>BIOCERR</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Disrupção não é um caminho. É um chamado.</h1>
-    <p>Bem-vindo à BIOCERR: inovação regenerativa e descentralizada para um futuro viável.</p>
+    <div class="top-bar">
+      <h1>BIOCERR</h1>
+      <p>Produção descentralizada regenerativa 🌱 Invenção validada globalmente</p>
+    </div>
+    <nav>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="industria.html">Indústria Matriz</a>
+      <a href="mcefps.html">MCEFPs</a>
+      <a href="index.html">Dashboard</a>
+      <a href="bio.html">BIO me escuta</a>
+      <a href="simulador.html">Simulador</a>
+      <a href="rotulo.html">Rótulo</a>
+      <a href="pitch.html">Pitch</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="manifesto.html">Manifesto</a>
-    <a href="industria-matriz.html">Indústria Matriz</a>
-    <a href="mcefps.html">MCEFPs</a>
-    <a href="coalizao.html">Coalizão Global</a>
-    <a href="pitch.html">Pitch</a>
-  </nav>
-
   <main>
-    <section>
-      <h2>Sobre a BIOCERR</h2>
+    <section class="hero">
+      <h2>Disrupção não é um caminho. É um chamado.</h2>
       <p>
-        A BIOCERR nasceu da convicção de que é possível inovar com ética, justiça e regeneração. Nossa invenção — o Sistema Modular de Produção Descentralizada (SMPD) — foi validada na produção da vacina contra a COVID-19 e representa um novo paradigma para a indústria e os territórios.
+        Desde 2015, a BIOCERR desenvolve soluções reais para a produção regenerativa
+        de produtos essenciais. Nossa tecnologia é validada, protegida e pronta para
+        transformar o mundo. Conheça o Sistema Modular de Produção Descentralizada (SMPD).
       </p>
     </section>
-
-    <section class="modules-section">
-      <h3>Acesse diretamente um módulo</h3>
-      <div class="module-grid">
-        <div class="module"><a href="manifesto.html">Manifesto</a></div>
-        <div class="module"><a href="industria-matriz.html">Indústria Matriz</a></div>
-        <div class="module"><a href="mcefps.html">MCEFPs</a></div>
-        <div class="module"><a href="coalizao.html">Coalizão Global</a></div>
-        <div class="module"><a href="pitch.html">Pitch</a></div>
-      </div>
-    </section>
   </main>
-
-  <footer>
-    &copy; 2025 BIOCERR. Todos os direitos reservados.
-  </footer>
 </body>
 </html>
