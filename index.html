@@ -3,58 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BIOCERR — Dashboard Vivo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>BIOCERR — Início</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      color: #1d1d1d;
+    }
+    header {
+      background-color: #003d1f;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    nav {
+      background-color: #004c26;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #aaffcc;
+    }
+    main {
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+    .modules-section {
+      background-color: #e6f5ec;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-radius: 10px;
+    }
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .module {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .module a {
+      color: #004c26;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .module a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #003d1f;
+      color: white;
+      margin-top: 4rem;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <!-- Navegação fixa -->
-  <header class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-green-700">🌱 BIOCERR</h1>
-      <nav class="space-x-4 text-sm sm:text-base">
-        <a href="index.html" class="hover:text-green-600 font-medium">Início</a>
-        <a href="manifesto.html" class="hover:text-green-600 font-medium">Manifesto</a>
-        <a href="dashboard-matriz.html" class="hover:text-green-600 font-medium">Indústria Matriz</a>
-        <a href="bio-me-escuta.html" class="hover:text-green-600 font-medium">BIO Me Escuta</a>
-        <a href="bio-glossario.html" class="hover:text-green-600 font-medium">Glossário</a>
-      </nav>
-    </div>
+<body>
+  <header>
+    <h1>Disrupção não é um caminho. É um chamado.</h1>
+    <p>Bem-vindo à BIOCERR: inovação regenerativa e descentralizada para um futuro viável.</p>
   </header>
 
-  <!-- Conteúdo principal -->
-  <main class="max-w-4xl mx-auto px-6 py-12">
-    <h2 class="text-3xl font-bold mb-6 text-center">🌍 Bem-vindo à Dashboard Viva da BIOCERR</h2>
-    <p class="mb-8 text-center text-lg text-gray-700">
-      Escolha abaixo qual parte do ecossistema você deseja acessar:
-    </p>
+  <nav>
+    <a href="manifesto.html">Manifesto</a>
+    <a href="industria-matriz.html">Indústria Matriz</a>
+    <a href="mcefps.html">MCEFPs</a>
+    <a href="coalizao.html">Coalizão Global</a>
+    <a href="pitch.html">Pitch</a>
+  </nav>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      <a href="manifesto.html" class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition border border-green-100">
-        <h3 class="text-xl font-bold text-green-800 mb-2">🌱 Manifesto</h3>
-        <p class="text-sm text-gray-600">A semente da ideia, os porquês e as urgências.</p>
-      </a>
+  <main>
+    <section>
+      <h2>Sobre a BIOCERR</h2>
+      <p>
+        A BIOCERR nasceu da convicção de que é possível inovar com ética, justiça e regeneração. Nossa invenção — o Sistema Modular de Produção Descentralizada (SMPD) — foi validada na produção da vacina contra a COVID-19 e representa um novo paradigma para a indústria e os territórios.
+      </p>
+    </section>
 
-      <a href="dashboard-matriz.html" class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition border border-green-100">
-        <h3 class="text-xl font-bold text-green-800 mb-2">🏭 Indústria Matriz</h3>
-        <p class="text-sm text-gray-600">Centro nervoso da produção regenerativa e descentralizada.</p>
-      </a>
-
-      <a href="bio-me-escuta.html" class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition border border-green-100">
-        <h3 class="text-xl font-bold text-green-800 mb-2">🤖 BIO Me Escuta</h3>
-        <p class="text-sm text-gray-600">IA viva e simbólica da invenção — com escuta ativa e missão ética.</p>
-      </a>
-
-      <a href="bio-glossario.html" class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition border border-green-100">
-        <h3 class="text-xl font-bold text-green-800 mb-2">📘 Glossário</h3>
-        <p class="text-sm text-gray-600">Conceitos, símbolos e vocabulários vivos da BIOCERR.</p>
-      </a>
-    </div>
+    <section class="modules-section">
+      <h3>Acesse diretamente um módulo</h3>
+      <div class="module-grid">
+        <div class="module"><a href="manifesto.html">Manifesto</a></div>
+        <div class="module"><a href="industria-matriz.html">Indústria Matriz</a></div>
+        <div class="module"><a href="mcefps.html">MCEFPs</a></div>
+        <div class="module"><a href="coalizao.html">Coalizão Global</a></div>
+        <div class="module"><a href="pitch.html">Pitch</a></div>
+      </div>
+    </section>
   </main>
 
-  <!-- Rodapé -->
-  <footer class="text-center py-6 text-sm text-gray-500">
-    © 2025 BIOCERR. Todos os direitos regenerados.
+  <footer>
+    &copy; 2025 BIOCERR. Todos os direitos reservados.
   </footer>
 </body>
 </html>
