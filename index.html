@@ -1,94 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BIOCERR — Início</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #e6ffe6, #f0fff4);
-      color: #222;
-    }
-    header {
-      background-color: #043927;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      letter-spacing: 1px;
-    }
-    nav {
-      background-color: #ffffffee;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    nav a {
-      color: #043927;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 10px;
-      transition: all 0.3s ease;
-    }
-    nav a:hover {
-      background-color: #d0f2e1;
-    }
-    .hero {
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #f3f3f3;
-      font-size: 0.9rem;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIOCERR — Dashboard Vivo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
-<body>
-  <header>
-    <h1>BIOCERR</h1>
-    <p>Produção descentralizada regenerativa 🌱 Invenção validada globalmente</p>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navegação fixa -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-green-700">🌱 BIOCERR</h1>
+      <nav class="space-x-4 text-sm sm:text-base">
+        <a href="index.html" class="hover:text-green-600 font-medium">Início</a>
+        <a href="manifesto.html" class="hover:text-green-600 font-medium">Manifesto</a>
+        <a href="dashboard-matriz.html" class="hover:text-green-600 font-medium">Indústria Matriz</a>
+        <a href="bio-me-escuta.html" class="hover:text-green-600 font-medium">BIO Me Escuta</a>
+        <a href="bio-glossario.html" class="hover:text-green-600 font-medium">Glossário</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="manifesto.html">Manifesto</a>
-    <a href="painel-matriz.html">Indústria Matriz</a>
-    <a href="painel-mcefp.html">MCEFPs</a>
-    <a href="dashboard-matriz.html">Dashboard</a>
-    <a href="bio-me-escuta.html">BIO me escuta</a>
-    <a href="simulador.html">Simulador</a>
-    <a href="rotulo-lote.html">Rótulo</a>
-    <a href="pitch/index.html">Pitch</a>
-  </nav>
+  <!-- Conteúdo principal -->
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold mb-6 text-center">🌍 Bem-vindo à Dashboard Viva da BIOCERR</h2>
+    <p class="mb-8 text-center text-lg text-gray-700">
+      Escolha abaixo qual parte do ecossistema você deseja acessar:
+    </p>
 
-  <section class="hero">
-    <h2>Disrupção não é um caminho. É um chamado.</h2>
-    <p>Desde 2015, a BIOCERR desenvolve soluções reais para a produção regenerativa de produtos essenciais. Nossa tecnologia é validada, protegida e pronta para transformar o mundo. Conheça o Sistema Modular de Produção Descentralizada (SMPD).</p>
-  </section>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <a href="manifesto.html" class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition border border-green-100">
+        <h3 class="text-xl font-bold text-green-800 mb-2">🌱 Manifesto</h3>
+        <p class="text-sm text-gray-600">A semente da ideia, os porquês e as urgências.</p>
+      </a>
 
-  <footer>
-    &copy; 2015–2025 BIOCERR — Todos os direitos reservados<br>
-    Desenvolvido com 🌿 no Cerrado brasileiro, rumo ao mundo.
+      <a href="dashboard-matriz.html" class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition border border-green-100">
+        <h3 class="text-xl font-bold text-green-800 mb-2">🏭 Indústria Matriz</h3>
+        <p class="text-sm text-gray-600">Centro nervoso da produção regenerativa e descentralizada.</p>
+      </a>
+
+      <a href="bio-me-escuta.html" class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition border border-green-100">
+        <h3 class="text-xl font-bold text-green-800 mb-2">🤖 BIO Me Escuta</h3>
+        <p class="text-sm text-gray-600">IA viva e simbólica da invenção — com escuta ativa e missão ética.</p>
+      </a>
+
+      <a href="bio-glossario.html" class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition border border-green-100">
+        <h3 class="text-xl font-bold text-green-800 mb-2">📘 Glossário</h3>
+        <p class="text-sm text-gray-600">Conceitos, símbolos e vocabulários vivos da BIOCERR.</p>
+      </a>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="text-center py-6 text-sm text-gray-500">
+    © 2025 BIOCERR. Todos os direitos regenerados.
   </footer>
 </body>
 </html>
