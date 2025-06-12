@@ -4,80 +4,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BIOCERR — Dashboard Vivo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
     <style>
+      :root {
+        --verde-biocerr: #bad80a;
+        --azul-biocerr: #c2eaf0;
+        --preto-suave: #121212;
+        --cinza-claro: #eeeeee;
+      }
+
       body {
         margin: 0;
         font-family: "Inter", sans-serif;
-        background-color: #000;
-        color: #fff;
+        background-color: var(--preto-suave);
+        color: var(--cinza-claro);
+        scroll-behavior: smooth;
       }
+
       header {
-        background-color: #0d1f14;
+        background-color: #0e1912;
         padding: 1rem 2rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
       }
+
       nav a {
-        color: #e0e0e0;
+        color: var(--azul-biocerr);
         margin: 0 1rem;
         text-decoration: none;
-        font-weight: 500;
+        font-weight: 600;
+        transition: 0.3s;
       }
+
+      nav a:hover {
+        color: var(--verde-biocerr);
+      }
+
       .logo {
         height: 48px;
       }
+
       .hero {
         text-align: center;
         padding: 4rem 1rem;
-        background-color: #111;
+        background-color: #151d14;
       }
+
       .hero h1 {
         font-size: 2.5rem;
+        color: var(--azul-biocerr);
         margin-bottom: 1rem;
       }
+
       .hero p {
-        color: #cfcfcf;
         font-size: 1.25rem;
+        color: var(--verde-biocerr);
       }
+
       .cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 2rem;
         padding: 4rem 2rem;
-        background-color: #090909;
+        background-color: #1a1f18;
       }
+
       .card {
-        background-color: #1a1a1a;
+        background-color: #222822;
         padding: 2rem;
         border-radius: 1.5rem;
         text-align: center;
-        box-shadow: 0 0 8px rgba(0, 255, 128, 0.15);
-        transition: 0.3s;
+        box-shadow: 0 0 10px rgba(186, 216, 10, 0.15);
+        transition: transform 0.3s ease;
       }
+
       .card:hover {
-        background-color: #1f3322;
-        transform: scale(1.02);
+        transform: translateY(-5px);
+        background-color: #283428;
       }
+
       .card-icon {
         font-size: 2rem;
         margin-bottom: 0.5rem;
+        color: var(--verde-biocerr);
       }
+
       .card h3 {
-        color: #aef79a;
+        color: var(--azul-biocerr);
         font-size: 1.4rem;
         margin-bottom: 0.5rem;
       }
+
       .card p {
         color: #ccc;
         font-size: 0.95rem;
         font-style: italic;
       }
+
+      section[id] {
+        padding-top: 60px;
+        margin-top: -60px;
+      }
+
       footer {
         background-color: #000;
         text-align: center;
@@ -91,11 +123,11 @@
     <header>
       <img src="logo grande.png" alt="Logo BIOCERR" class="logo" />
       <nav>
-        <a href="#">Manifesto</a>
-        <a href="#">Indústria Matriz</a>
-        <a href="#">MCEFPs</a>
-        <a href="#">BIO me escuta</a>
-        <a href="#">Glossário</a>
+        <a href="#manifesto">Manifesto</a>
+        <a href="#industria">Indústria Matriz</a>
+        <a href="#mcefps">MCEFPs</a>
+        <a href="#bio">BIO me escuta</a>
+        <a href="#glossario">Glossário</a>
       </nav>
     </header>
 
@@ -105,22 +137,27 @@
     </section>
 
     <section class="cards">
-      <div class="card">
+      <div class="card" id="manifesto">
         <div class="card-icon">🌱</div>
         <h3>Manifesto</h3>
         <p>“A semente da ideia, os porquês e as urgências.”</p>
       </div>
-      <div class="card">
+      <div class="card" id="industria">
         <div class="card-icon">🏭</div>
         <h3>Indústria Matriz</h3>
         <p>“Onde a lógica industrial foi rescrita com propósito.”</p>
       </div>
-      <div class="card">
+      <div class="card" id="mcefps">
+        <div class="card-icon">🧪</div>
+        <h3>MCEFPs</h3>
+        <p>“Mini centrais, máximo impacto regenerativo.”</p>
+      </div>
+      <div class="card" id="bio">
         <div class="card-icon">🤖</div>
         <h3>BIO me escuta</h3>
         <p>“IA com alma simbólica, escuta ética e missão viva.”</p>
       </div>
-      <div class="card">
+      <div class="card" id="glossario">
         <div class="card-icon">📖</div>
         <h3>Glossário</h3>
         <p>“Palavras que não são só palavras — são pistas do caminho.”</p>
