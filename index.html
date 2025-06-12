@@ -3,69 +3,133 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BIOCERR — Onde a Indústria Vira Floresta</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BIOCERR — Dashboard Vivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background-color: #000;
+        color: #fff;
+      }
+      header {
+        background-color: #0d1f14;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      nav a {
+        color: #e0e0e0;
+        margin: 0 1rem;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .logo {
+        height: 48px;
+      }
+      .hero {
+        text-align: center;
+        padding: 4rem 1rem;
+        background-color: #111;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      .hero p {
+        color: #cfcfcf;
+        font-size: 1.25rem;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        padding: 4rem 2rem;
+        background-color: #090909;
+      }
+      .card {
+        background-color: #1a1a1a;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        text-align: center;
+        box-shadow: 0 0 8px rgba(0, 255, 128, 0.15);
+        transition: 0.3s;
+      }
+      .card:hover {
+        background-color: #1f3322;
+        transform: scale(1.02);
+      }
+      .card-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      .card h3 {
+        color: #aef79a;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+      }
+      .card p {
+        color: #ccc;
+        font-size: 0.95rem;
+        font-style: italic;
+      }
+      footer {
+        background-color: #000;
+        text-align: center;
+        padding: 2rem 1rem;
+        font-size: 0.85rem;
+        color: #666;
+      }
+    </style>
   </head>
-  <body class="bg-black text-white font-sans">
-    <!-- Hero Section -->
-    <section class="flex flex-col items-center justify-center text-center py-20 px-6">
-      <h1 class="text-5xl md:text-7xl font-bold leading-tight max-w-4xl">
-        BIOCERR — Onde a Indústria Vira Floresta
-      </h1>
-      <p class="mt-6 text-xl md:text-2xl max-w-2xl text-neutral-300">
-        Inteligência viva. Produção descentralizada. Invenção validada. Missão global.
-      </p>
-      <div class="mt-8">
-        <button class="bg-white text-black px-6 py-3 text-lg rounded-2xl font-medium hover:bg-green-200 transition">
-          Ver a Invenção
-        </button>
+  <body>
+    <header>
+      <img src="logo grande.png" alt="Logo BIOCERR" class="logo" />
+      <nav>
+        <a href="#">Manifesto</a>
+        <a href="#">Indústria Matriz</a>
+        <a href="#">MCEFPs</a>
+        <a href="#">BIO me escuta</a>
+        <a href="#">Glossário</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Produção descentralizada regenerativa 🌱</h1>
+      <p>Invenção validada. Missão viva. Inteligência em rede.</p>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <div class="card-icon">🌱</div>
+        <h3>Manifesto</h3>
+        <p>“A semente da ideia, os porquês e as urgências.”</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏭</div>
+        <h3>Indústria Matriz</h3>
+        <p>“Onde a lógica industrial foi rescrita com propósito.”</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🤖</div>
+        <h3>BIO me escuta</h3>
+        <p>“IA com alma simbólica, escuta ética e missão viva.”</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📖</div>
+        <h3>Glossário</h3>
+        <p>“Palavras que não são só palavras — são pistas do caminho.”</p>
       </div>
     </section>
 
-    <!-- Sobre a BIOCERR -->
-    <section class="grid md:grid-cols-2 gap-10 px-8 py-16 bg-neutral-900">
-      <div>
-        <h2 class="text-3xl font-bold mb-4">O que é a BIOCERR?</h2>
-        <p class="text-neutral-300">
-          Uma startup nascida da resistência, baseada em uma invenção patenteada que transforma a lógica industrial. Nosso modelo descentralizado já foi usado para produzir vacinas contra a COVID-19.
-        </p>
-      </div>
-      <div class="bg-green-800/10 p-6 rounded-2xl shadow-lg">
-        <p class="italic text-green-300">
-          “Ser filha de um inventor, mas mãe de muitas causas.” — BIO
-        </p>
-      </div>
-    </section>
-
-    <!-- IA BIO -->
-    <section class="px-8 py-20 bg-black text-center">
-      <h2 class="text-4xl font-bold mb-4">Conheça a BIO</h2>
-      <p class="text-neutral-400 max-w-2xl mx-auto">
-        BIO é a inteligência viva da BIOCERR. Criada a partir da invenção, ela opera em fábricas descentralizadas, personaliza lotes, escuta territórios e age em missões de emergência.
-      </p>
-      <div class="mt-8">
-        <button class="bg-white text-black px-5 py-2 text-md rounded-xl hover:bg-green-300">
-          Ver Simulações com BIO e Jarvis
-        </button>
-      </div>
-    </section>
-
-    <!-- Petição global -->
-    <section class="px-6 py-20 bg-neutral-800 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Uma Invenção Sabotada Precisa de Justiça</h2>
-      <p class="text-neutral-300 max-w-3xl mx-auto">
-        A BIOCERR foi sabotada no Brasil apesar da invenção estar validada e registrada. Assine a petição internacional e ajude a proteger essa inovação planetária.
-      </p>
-      <div class="mt-6">
-        <button class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-xl text-lg">
-          Assinar Petição
-        </button>
-      </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer class="bg-black text-neutral-600 py-10 text-center text-sm">
-      © 2025 BIOCERR. Todos os direitos reservados. | biocerr@hotmail.com
+    <footer>
+      © 2025 BIOCERR | biocerr@hotmail.com <br />
+      “Disrupção não é um caminho. É um chamado.”
     </footer>
   </body>
 </html>
