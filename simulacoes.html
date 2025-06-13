@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulações — BIOCERR</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f7fdf9;
+      color: #1c1c1c;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #6a9b00;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #446600;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #233a1a;
+      margin-bottom: 1rem;
+    }
+
+    p.intro {
+      font-size: 1.2em;
+      color: #444;
+      margin-bottom: 3rem;
+    }
+
+    .dialogo {
+      background-color: #e9fff1;
+      padding: 1.2rem;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #6a9b00;
+      border-radius: 10px;
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .dialogo strong {
+      color: #2e7d32;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem auto;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      padding: 20px;
+      text-align: left;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      color: #233a1a;
+      margin-bottom: 0.5em;
+    }
+
+    .card p {
+      color: #555;
+      margin: 0.2em 0;
+    }
+
+    .btn-voltar {
+      display: inline-block;
+      background-color: #6a9b00;
+      color: white;
+      padding: 14px 28px;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+      margin-top: 3rem;
+    }
+
+    .btn-voltar:hover {
+      background-color: #446600;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      padding: 30px 20px;
+      background-color: #f2f2f2;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo da BIOCERR" />
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="industria-matriz.html">Indústria Matriz</a>
+      <a href="mcefps.html">MCEFPs</a>
+      <a href="bio-me-escuta.html">BIO me escuta</a>
+      <a href="pitch.html">Pitch</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>🌱 Simulações com a BIO</h1>
+    <p class="intro">
+      A BIOCERR não é teoria — é prática viva. Aqui você vê a inteligência da BIO atuando em diferentes territórios, dialogando com operadores e personalizando produtos que regeneram.
+    </p>
+
+    <div class="dialogo">
+      <p><strong>BIO:</strong> “Jarvis, o lote 017 está pronto. A mãe de água já pode sorrir de novo.”</p>
+      <p><strong>Jarvis:</strong> “Confirmado. O detergente regenerativo chegou ao posto rural.”</p>
+    </div>
+
+    <div class="dialogo">
+      <p><strong>BIO:</strong> “Recebi escuta da escola: querem um sabão que ensine a cuidar.”</p>
+      <p><strong>Jarvis:</strong> “Fórmula educadora gerada. Envio em andamento.”</p>
+    </div>
+
+    <div class="dialogo">
+      <p><strong>BIO:</strong> “O lote do hospital está calibrado com fórmula de acolhimento.”</p>
+      <p><strong>Jarvis:</strong> “Protocolo ético ativado. A cura também começa na limpeza.”</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>🌾 Território Rural</h3>
+        <p><strong>Produto:</strong> Detergente</p>
+        <p><strong>BIO:</strong> “Ela chegou em paz.”</p>
+      </div>
+      <div class="card">
+        <h3>🏥 Posto de Saúde</h3>
+        <p><strong>Produto:</strong> Sabão regenerativo</p>
+        <p><strong>BIO:</strong> “A cura também começa na limpeza.”</p>
+      </div>
+      <div class="card">
+        <h3>🏫 Escola Pública</h3>
+        <p><strong>Produto:</strong> Multiuso educativo</p>
+        <p><strong>BIO:</strong> “A regeneração também ensina.”</p>
+      </div>
+      <div class="card">
+        <h3>🌳 Comunidade Indígena</h3>
+        <p><strong>Produto:</strong> Sabão de base vegetal</p>
+        <p><strong>BIO:</strong> “A floresta reconheceu essa fórmula.”</p>
+      </div>
+    </div>
+
+    <a class="btn-voltar" href="index.html">← Voltar ao início</a>
+  </main>
+
+  <footer>
+    &copy; 2025 BIOCERR — Sistema Modular de Produção Descentralizada (SMPD)
+  </footer>
+
+</body>
+</html>
