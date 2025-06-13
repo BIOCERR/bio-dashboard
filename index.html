@@ -3,40 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BIOCERR — Onde a Indústria Vira Floresta</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+  <title>BIOCERR — Início</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f4fef6;
-      color: #1a1a1a;
+      background-color: #f7fdf9;
+      color: #1c1c1c;
     }
 
     header {
-      background-color: #ffffff; /* navbar mais neutra */
-      padding: 16px 32px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
     header img {
-      height: 56px;
+      height: 50px;
     }
 
     nav a {
-      margin-left: 24px;
+      margin-left: 25px;
       text-decoration: none;
-      color: #1a1a1a;
       font-weight: 600;
-      transition: all 0.3s ease;
+      color: #6a9b00;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #087f5b;
-      border-bottom: 2px solid #087f5b;
+      color: #446600;
     }
 
     main {
@@ -45,77 +44,67 @@
     }
 
     h1 {
-      font-size: 3rem;
-      margin-bottom: 16px;
-      color: #063e2d;
+      font-size: 2.5em;
+      color: #233a1a;
+      margin-bottom: 0.5em;
     }
 
     p {
-      font-size: 1.25rem;
+      font-size: 1.2em;
       max-width: 700px;
-      margin: 0 auto 32px;
-      color: #333;
+      margin: 0 auto 2em auto;
+      color: #555;
     }
 
-    .button-group {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 32px;
-    }
-
-    .button-group a {
-      background-color: #087f5b;
-      color: white;
+    .btn {
+      background-color: #6a9b00;
+      color: #fff;
       padding: 14px 28px;
-      border-radius: 12px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
       text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
+      display: inline-block;
+      margin: 10px;
     }
 
-    .button-group a:hover {
-      background-color: #065f46;
-      transform: scale(1.05);
+    .btn:hover {
+      background-color: #446600;
     }
 
     footer {
       text-align: center;
-      padding: 40px 16px;
-      color: #777;
-      font-size: 0.9rem;
+      font-size: 0.9em;
+      color: #888;
+      padding: 30px 20px;
+      background-color: #f2f2f2;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo%20grande.png" alt="Logo da BIOCERR" />
+    <img src="logo.png" alt="Logo da BIOCERR"/>
     <nav>
       <a href="manifesto.html">Manifesto</a>
-      <a href="industria.html">Indústria Matriz</a>
-      <a href="bio.html">IA BIO</a>
-      <a href="peticao.html">Petição</a>
-      <a href="contato.html">Contato</a>
+      <a href="industria-matriz.html">Indústria Matriz</a>
+      <a href="mcefps.html">MCEFPs</a>
+      <a href="bio-me-escuta.html">BIO me escuta</a>
     </nav>
   </header>
 
   <main>
-    <h1>BIOCERR — Onde a Indústria Vira Floresta</h1>
-    <p>
-      Inteligência viva. Produção descentralizada. Invenção validada. Missão global.
-    </p>
-
-    <div class="button-group">
-      <a href="manifesto.html">Ver Manifesto 🌱</a>
-      <a href="industria.html">Ver Indústria Matriz 🏭</a>
-      <a href="bio.html">Ver IA BIO 🤖</a>
-    </div>
+    <h1>Disrupção não é um caminho. É um chamado.</h1>
+    <p>Desde 2015, a BIOCERR desenvolve soluções reais para a produção regenerativa de produtos essenciais.  
+       Nossa tecnologia é validada, protegida e pronta para transformar o mundo.</p>
+    <a class="btn" href="manifesto.html">Ler o Manifesto</a>
+    <a class="btn" href="pitch/index.html">Ver o Pitch</a>
   </main>
 
   <footer>
-    © 2025 BIOCERR — Todos os direitos reservados. | Contato: biocerr@hotmail.com
+    &copy; 2025 BIOCERR — Sistema Modular de Produção Descentralizada (SMPD)
   </footer>
 
 </body>
