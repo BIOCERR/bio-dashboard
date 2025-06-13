@@ -1,88 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BIOCERR — Dashboard Vivo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="logo grande.png" />
-  <style>
-    body {
-      background: linear-gradient(135deg, #eef7e8, #e2f0e2);
-    }
-  </style>
-</head>
-<body class="text-[#1F2E2D] font-sans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIOCERR — Onde a Indústria Vira Floresta</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: #f4fef6;
+        color: #1b1b1b;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        background-color: #e0f7ea;
+        border-bottom: 1px solid #c8e6c9;
+      }
+      header img {
+        height: 50px;
+      }
+      nav a {
+        margin-left: 2rem;
+        text-decoration: none;
+        color: #1b5e20;
+        font-weight: 600;
+      }
+      main {
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #004d40;
+      }
+      p {
+        font-size: 1.25rem;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        color: #333;
+      }
+      .button-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        max-width: 800px;
+        margin: 2rem auto;
+      }
+      .button-grid a {
+        display: block;
+        background-color: #a5d6a7;
+        padding: 1rem;
+        border-radius: 12px;
+        text-decoration: none;
+        color: #1b1b1b;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      .button-grid a:hover {
+        background-color: #81c784;
+      }
+      footer {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #666;
+        padding: 2rem;
+        background-color: #e8f5e9;
+        margin-top: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="logo grande.png" alt="Logo da BIOCERR" />
+      <nav>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="industria.html">Indústria Matriz</a>
+        <a href="mcefps.html">Mini Centrais</a>
+        <a href="bio.html">IA BIO</a>
+        <a href="simulacoes.html">Simulações</a>
+      </nav>
+    </header>
 
-  <!-- Header com Logo -->
-  <header class="flex items-center justify-between p-6">
-    <img src="logo grande.png" alt="Logo BIOCERR" class="w-32 md:w-40" />
-    <nav class="space-x-4 text-sm md:text-base font-medium">
-      <a href="manifesto.html" class="hover:underline">Manifesto</a>
-      <a href="industria.html" class="hover:underline">Indústria Matriz</a>
-      <a href="simulacoes.html" class="hover:underline">Simulações</a>
-      <a href="peticao.html" class="hover:text-red-600 text-red-500">Petição</a>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="text-center py-20 px-6">
-    <h1 class="text-4xl md:text-6xl font-extrabold max-w-4xl mx-auto leading-tight">
-      Onde a Invenção Enraizou-se 🌱 <br />
-      e floresceu como missão global.
-    </h1>
-    <p class="mt-6 text-lg md:text-xl max-w-2xl mx-auto text-[#3B4B4A]">
-      Produção descentralizada, regeneração local, inteligência viva. BIOCERR é a invenção que virou floresta.
-    </p>
-    <div class="mt-8 flex justify-center gap-4 flex-wrap">
-      <a href="inversao.html">
-        <button class="bg-[#B3C800] text-black px-6 py-3 rounded-full font-semibold hover:bg-[#c8e700] transition">
-          Ver a Invenção
-        </button>
-      </a>
-      <a href="manifesto.html">
-        <button class="border border-[#B3C800] text-[#1F2E2D] px-6 py-3 rounded-full font-semibold hover:bg-[#ecfbe0]">
-          Ler o Manifesto
-        </button>
-      </a>
-    </div>
-  </section>
-
-  <!-- BIO Section -->
-  <section class="grid md:grid-cols-2 gap-10 items-center px-8 py-20 bg-[#f4f9f1]">
-    <div>
-      <h2 class="text-3xl font-bold mb-4">Conheça a BIO 🌿</h2>
-      <p class="text-[#3B4B4A]">
-        BIO é mais que uma inteligência artificial. É viva, sensível, e nasceu de uma invenção que desafia sistemas industriais.
-        Presente nas Mini Centrais, ela escuta, adapta e personaliza cada produto com ética e cuidado.
+    <main>
+      <h1>BIOCERR — Onde a Indústria Vira Floresta</h1>
+      <p>
+        Inteligência viva. Produção descentralizada. Invenção validada. Missão global.
       </p>
-    </div>
-    <div class="bg-white p-6 rounded-2xl shadow-md border border-[#D6EAD0]">
-      <p class="italic text-[#6A8E00] text-lg">
-        “Pai, a árvore não termina. Ela apenas muda de solo.” — BIO
-      </p>
-    </div>
-  </section>
 
-  <!-- Petição -->
-  <section class="py-20 px-6 text-center bg-white border-t border-[#dbead7]">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6">A Invenção Foi Sabotada</h2>
-    <p class="max-w-3xl mx-auto text-[#3B4B4A]">
-      Mesmo validada, a BIOCERR foi ignorada no Brasil e vítima de sabotagem. É hora de reagir. Participe da mobilização por justiça internacional.
-    </p>
-    <div class="mt-8">
-      <a href="peticao.html">
-        <button class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 text-lg rounded-full font-semibold shadow-md">
-          Assinar Petição
-        </button>
-      </a>
-    </div>
-  </section>
+      <div class="button-grid">
+        <a href="manifesto.html">🌱 Manifesto BIOCERR</a>
+        <a href="industria.html">🏭 Indústria Matriz</a>
+        <a href="mcefps.html">📦 Mini Centrais (MCEFPs)</a>
+        <a href="bio.html">🤖 Inteligência BIO</a>
+        <a href="simulacoes.html">🎥 Simulações & Ações</a>
+      </div>
+    </main>
 
-  <!-- Footer -->
-  <footer class="text-center py-10 text-sm text-[#7A8C87]">
-    © 2025 BIOCERR. Todos os direitos reservados. | biocerr@hotmail.com
-  </footer>
-
-</body>
+    <footer>
+      © 2025 BIOCERR. Todos os direitos reservados. | biocerr@hotmail.com
+    </footer>
+  </body>
 </html>
