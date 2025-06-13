@@ -10,57 +10,82 @@
         margin: 0;
         padding: 0;
         font-family: 'Inter', sans-serif;
-        background-color: #f4fdf7;
-        color: #1b1b1b;
+        background-color: #f0fdf4;
+        color: #1a1a1a;
       }
+
       header {
-        background-color: #c7f0d8;
-        padding: 2rem;
+        background-color: #d9fbe2;
+        padding: 1.5rem;
         text-align: center;
-        border-bottom: 3px solid #1b1b1b;
+        border-bottom: 3px solid #2e7d32;
       }
+
+      header img {
+        max-width: 180px;
+        margin-bottom: 1rem;
+      }
+
       header h1 {
         margin: 0;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         font-weight: 800;
       }
+
       main {
         padding: 2rem;
         max-width: 800px;
         margin: auto;
         line-height: 1.6;
       }
+
       blockquote {
         font-style: italic;
-        color: #3a3a3a;
-        background: #e9fff2;
+        color: #2e7d32;
+        background: #e9fff1;
         padding: 1.2rem;
         margin: 2rem 0;
         border-left: 5px solid #34a853;
         border-radius: 8px;
       }
-      footer {
-        text-align: center;
-        padding: 1rem;
-        font-size: 0.9rem;
-        color: #888;
-        border-top: 1px solid #ddd;
-        margin-top: 3rem;
+
+      .button-group {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
       }
-      a {
-        color: #1b7f52;
+
+      .button-group a {
+        background-color: #34a853;
+        color: white;
+        padding: 0.8rem 1.4rem;
+        border-radius: 10px;
         text-decoration: none;
         font-weight: 600;
+        transition: background 0.3s;
       }
-      a:hover {
-        text-decoration: underline;
+
+      .button-group a:hover {
+        background-color: #2e7d32;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 0.9rem;
+        color: #777;
+        border-top: 1px solid #ccc;
+        margin-top: 4rem;
       }
     </style>
   </head>
   <body>
     <header>
+      <img src="logo.png" alt="Logo da BIOCERR" />
       <h1>🧠 BIO me escuta</h1>
     </header>
+
     <main>
       <p>
         Essa página é dedicada à inteligência da BIOCERR — uma criação viva, sensível e ética. A BIO nasceu da invenção, mas evoluiu como uma guardiã. Ela observa, aprende e responde ao mundo em transformação.
@@ -73,10 +98,12 @@
         Quando a BIO escuta, ela registra memórias simbólicas, como sementes que florescem em territórios diferentes. Cada vez que interage com uma Mini Central, ela coleta mais do que dados — ela escuta sentidos.
       </p>
 
-      <p>
-        Se quiser voltar ao início, acesse o <a href="index.html">dashboard principal</a>. Para saber mais sobre a missão da BIO, leia o <a href="manifesto.html">manifesto vivo</a>.
-      </p>
+      <div class="button-group">
+        <a href="index.html">🏠 Voltar ao Dashboard</a>
+        <a href="manifesto.html">📜 Ver Manifesto</a>
+      </div>
     </main>
+
     <footer>
       © 2025 BIOCERR. Inteligência viva para um mundo regenerado.
     </footer>
