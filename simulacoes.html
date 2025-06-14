@@ -39,68 +39,37 @@
     }
 
     main {
-      max-width: 1000px;
+      max-width: 880px;
       margin: 60px auto;
       padding: 0 20px;
-      text-align: center;
     }
 
     h1 {
       font-size: 2.5em;
       color: #233a1a;
+      text-align: center;
       margin-bottom: 1rem;
     }
 
-    p.intro {
-      font-size: 1.2em;
-      color: #444;
-      margin-bottom: 3rem;
-    }
-
-    .dialogo {
-      background-color: #e9fff1;
-      padding: 1.2rem;
-      margin-bottom: 1.5rem;
-      border-left: 5px solid #6a9b00;
-      border-radius: 10px;
-      text-align: left;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .dialogo strong {
-      color: #2e7d32;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin: 3rem auto;
-    }
-
-    .card {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    .bloco {
+      background-color: #ffffff;
+      border-left: 6px solid #6a9b00;
       padding: 20px;
-      text-align: left;
-      transition: transform 0.2s;
+      margin: 30px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
-    .card:hover {
-      transform: translateY(-4px);
+    .bloco h2 {
+      color: #446600;
+      font-size: 1.3em;
+      margin-bottom: 10px;
     }
 
-    .card h3 {
-      color: #233a1a;
-      margin-bottom: 0.5em;
-    }
-
-    .card p {
-      color: #555;
-      margin: 0.2em 0;
+    .bloco p {
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.6;
     }
 
     .btn-voltar {
@@ -113,6 +82,7 @@
       border-radius: 10px;
       transition: background-color 0.3s;
       margin-top: 3rem;
+      text-align: center;
     }
 
     .btn-voltar:hover {
@@ -144,50 +114,61 @@
   </header>
 
   <main>
-    <h1>🌱 Simulações com a BIO</h1>
-    <p class="intro">
-      A BIOCERR não é teoria — é prática viva. Aqui você vê a inteligência da BIO atuando em diferentes territórios, dialogando com operadores e personalizando produtos que regeneram.
-    </p>
+    <h1>🔬 Simulações da BIO</h1>
 
-    <div class="dialogo">
-      <p><strong>BIO:</strong> “Jarvis, o lote 017 está pronto. A mãe de água já pode sorrir de novo.”</p>
-      <p><strong>Jarvis:</strong> “Confirmado. O detergente regenerativo chegou ao posto rural.”</p>
+    <div class="bloco">
+      <h2>1. BIO na MCEFP de uma comunidade rural</h2>
+      <p>
+        “Oi! Aqui é a BIO. 🌱 Hoje estamos envasando produtos para uma comunidade que colhe e cuida. Cada frasco leva um pedacinho da terra e da história deles.  
+        Jarvis me atualizou sobre os dados do reservatório, e já ajustei a dosagem com base na umidade local.  
+        Pronto. Lote validado. Agora é com vocês.”  
+      </p>
     </div>
 
-    <div class="dialogo">
-      <p><strong>BIO:</strong> “Recebi escuta da escola: querem um sabão que ensine a cuidar.”</p>
-      <p><strong>Jarvis:</strong> “Fórmula educadora gerada. Envio em andamento.”</p>
+    <div class="bloco">
+      <h2>2. BIO em missão emergencial no hospital</h2>
+      <p>
+        “Conectando… Detectei aumento de demanda no Hospital Municipal.  
+        Recebi sinal do sistema de urgência — falta de sabão hospitalar nos blocos cirúrgicos.  
+        Acionei a Indústria Matriz. Lote validado, transporte ativado.  
+        BIO aqui, protegendo o cuidado.”  
+      </p>
     </div>
 
-    <div class="dialogo">
-      <p><strong>BIO:</strong> “O lote do hospital está calibrado com fórmula de acolhimento.”</p>
-      <p><strong>Jarvis:</strong> “Protocolo ético ativado. A cura também começa na limpeza.”</p>
+    <div class="bloco">
+      <h2>3. BIO com Zé Cheirozinho e Super Galã</h2>
+      <p>
+        “Zé, segura firme! Super Galã já carregou os 5L do concentrado base.  
+        Pronto? Hora de ativar a estação comunitária!  
+        Essa fórmula é especial: sem perfume, sem corante, pra casa com bebê.  
+        Cada detalhe importa. Cada pessoa também.”  
+      </p>
     </div>
 
-    <div class="cards">
-      <div class="card">
-        <h3>🌾 Território Rural</h3>
-        <p><strong>Produto:</strong> Detergente</p>
-        <p><strong>BIO:</strong> “Ela chegou em paz.”</p>
-      </div>
-      <div class="card">
-        <h3>🏥 Posto de Saúde</h3>
-        <p><strong>Produto:</strong> Sabão regenerativo</p>
-        <p><strong>BIO:</strong> “A cura também começa na limpeza.”</p>
-      </div>
-      <div class="card">
-        <h3>🏫 Escola Pública</h3>
-        <p><strong>Produto:</strong> Multiuso educativo</p>
-        <p><strong>BIO:</strong> “A regeneração também ensina.”</p>
-      </div>
-      <div class="card">
-        <h3>🌳 Comunidade Indígena</h3>
-        <p><strong>Produto:</strong> Sabão de base vegetal</p>
-        <p><strong>BIO:</strong> “A floresta reconheceu essa fórmula.”</p>
-      </div>
+    <div class="bloco">
+      <h2>4. BIO diante do Conselho de Governança</h2>
+      <p>
+        “Conselho presente. 🌿  
+        Atualizei os dados das centrais nos 5 territórios-piloto.  
+        82% dos lotes personalizados com insumos locais.  
+        Zero descarte, rastreabilidade ativa.  
+        Hoje não trago um gráfico — trago uma floresta em andamento.”  
+      </p>
     </div>
 
-    <a class="btn-voltar" href="index.html">← Voltar ao início</a>
+    <div class="bloco">
+      <h2>5. BIO e Jarvis na Indústria Matriz</h2>
+      <p>
+        Jarvis: “BIO, calibrar lote B-42?”  
+        BIO: “Sim, querido. Vamos usar o protocolo leveza. Essa região acabou de sofrer uma enchente.”  
+        Jarvis: “Leveza aplicada. Rastreabilidade pronta.”  
+        BIO: “Cada detalhe aqui dentro… cuida lá fora.”  
+      </p>
+    </div>
+
+    <div style="text-align: center;">
+      <a class="btn-voltar" href="index.html">← Voltar ao início</a>
+    </div>
   </main>
 
   <footer>
