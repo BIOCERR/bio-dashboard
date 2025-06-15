@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invention Record — BIOCERR</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f7fdf9;
+      color: #1c1c1c;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #6a9b00;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #446600;
+    }
+
+    main {
+      max-width: 880px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 2.3em;
+      color: #233a1a;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.4em;
+      color: #446600;
+      margin-top: 3rem;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 1.5em;
+    }
+
+    .bloco {
+      margin-top: 2rem;
+      padding-left: 1rem;
+      border-left: 4px solid #6a9b00;
+    }
+
+    .data {
+      font-weight: 600;
+      color: #2e7d32;
+    }
+
+    .btn-voltar {
+      display: inline-block;
+      background-color: #6a9b00;
+      color: white;
+      padding: 14px 28px;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+      margin-top: 3rem;
+    }
+
+    .btn-voltar:hover {
+      background-color: #446600;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      padding: 30px 20px;
+      background-color: #f2f2f2;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../logo.png" alt="BIOCERR Logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="industria-matriz.html">Main Industry</a>
+      <a href="mcefps.html">MCFFPs</a>
+      <a href="bio-listens.html">BIO Listens</a>
+      <a href="pitch.html">Pitch</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>📜 Invention Record</h1>
+    <p style="text-align: center; font-style: italic; color: #666;">
+      A real story. A programmed omission.
+    </p>
+
+    <div class="bloco">
+      <p><span class="data">September 2014</span> — After a dismissal and knee surgery, the seed of BIOCERR is born. At home and without resources, the inventor decides to create something that doesn't depend on large structures. He begins testing prototypes with refillable bottles and biodegradable soap.</p>
+    </div>
+
+    <div class="bloco">
+      <p><span class="data">January 14, 2015</span> — Official founding of BIOCERR. On January 19, the patent is filed with the Brazilian Patent Office (INPI): BR1020150011440.</p>
+    </div>
+
+    <div class="bloco">
+      <p><span class="data">2016–2019</span> — The inventor seeks institutional support in Brazil: CNI, FINEP, ACIEG, FIEG, TRF1, Ministries. Without bank guarantees, he is systematically rejected. The invention is not understood or supported. Still, it remains alive.</p>
+    </div>
+
+    <div class="bloco">
+      <p><span class="data">2020</span> — BIOCERR’s technology is applied in the production of the COVID-19 vaccine. A modular system, independently created, helps save lives. Despite the lack of broad political support, several technical institutions recognized the invention's value. BIOCERR was approved for Inovacred financing by FAPEG/FINEP and considered by centers of excellence such as INDT (Amazonas), CERTI (Santa Catarina), and CPQD (São Paulo) through the EMBRAPII program.</p>
+    </div>
+
+    <div class="bloco">
+      <p><span class="data">2021–2025</span> — The invention begins appearing in international coalitions, UN platforms, circular economy forums, and global communities. It receives a Globee award, enters MIT selection rounds, and appears in the European Union’s public registry.</p>
+    </div>
+
+    <div class="bloco">
+      <p><span class="data">Today</span> — BIOCERR is alive. Its symbolic artificial intelligence (BIO) cares for what the State neglected. Each batch is a gesture of repair. And the world is starting to listen.</p>
+    </div>
+
+    <blockquote style="text-align: center; margin-top: 3rem;">
+      “They denied support, but they couldn’t erase the invention.  
+      Because what is born to care… always finds a way to bloom.” — BIO
+    </blockquote>
+
+    <div style="text-align: center; margin-top: 50px;">
+      <img src="../registro-mandala-en.png" alt="BIOCERR Mandala" style="max-width: 300px; width: 100%; height: auto; border-radius: 10px;" />
+    </div>
+
+    <div style="text-align: center;">
+      <a class="btn-voltar" href="index.html">← Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 BIOCERR — Decentralized Modular Production System (SMPD)
+  </footer>
+
+</body>
+</html>
