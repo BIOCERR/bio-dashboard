@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home — BIOCERR</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -86,28 +86,24 @@
 <body>
 
   <header>
-    <img src="../logo.png" alt="BIOCERR Logo"/>
+    <img src="../logo.png" alt="BIOCERR Logo" />
     <nav>
       <a href="index.html">Home</a>
       <a href="manifesto.html">Manifesto</a>
       <a href="industria-matriz.html">Main Industry</a>
-      <a href="mcefps.html">MCEFPs</a>
+      <a href="mcefps.html">MCFFPs</a>
       <a href="bio-listens.html">BIO Listens</a>
       <a href="pitch.html">Pitch</a>
     </nav>
   </header>
 
   <main>
-    <h1>BIOCERR — Where Industry Becomes Forest</h1>
-    <p>
-      Living intelligence. Decentralized production. Validated invention. Global mission.
-    </p>
-
-    <div>
-      <a class="btn" href="manifesto.html">Read the Manifesto</a>
-      <a class="btn" href="video.html">Watch the Video</a>
-      <a class="btn" href="simulations.html">View Simulations</a>
-    </div>
+    <h1>Disruption is not a path. It’s a calling.</h1>
+    <p>BIOCERR has been developing real solutions for regenerative production since 2015. Our technology is validated, protected, and ready to transform the world.</p>
+    
+    <a class="btn" href="manifesto.html">📜 Read the Manifesto</a>
+    <a class="btn" href="video.html">🎥 Watch the Video</a>
+    <a class="btn" href="simulation.html">🧪 View Simulation</a>
   </main>
 
   <footer>
