@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video — BIOCERR</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f7fdf9;
+      color: #1c1c1c;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #6a9b00;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #446600;
+    }
+
+    main {
+      max-width: 880px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      color: #233a1a;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.7;
+      color: #444;
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    iframe {
+      display: block;
+      margin: 0 auto 40px auto;
+      max-width: 100%;
+      border: none;
+      border-radius: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 3rem;
+    }
+
+    li {
+      font-size: 1em;
+      margin-bottom: 1.2em;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    li span {
+      margin-right: 10px;
+      font-size: 1.2em;
+    }
+
+    a.link {
+      color: #2e7d32;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    a.link:hover {
+      text-decoration: underline;
+    }
+
+    .pdf {
+      margin-left: 30px;
+      font-size: 0.95em;
+      color: #444;
+      margin-top: -0.8em;
+      margin-bottom: 1.5em;
+    }
+
+    .btn-voltar {
+      display: inline-block;
+      background-color: #6a9b00;
+      color: white;
+      padding: 12px 26px;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+      margin-top: 3rem;
+    }
+
+    .btn-voltar:hover {
+      background-color: #446600;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      padding: 30px 20px;
+      background-color: #f2f2f2;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../logo.png" alt="BIOCERR Logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="industria-matriz.html">Main Industry</a>
+      <a href="mcefps.html">MCFFPs</a>
+      <a href="bio-listens.html">BIO Listens</a>
+      <a href="pitch.html">Pitch</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>🎥 BIOCERR — Alive, Validated and Ready</h1>
+
+    <p>
+      This video was created for the Master Class selection process  
+      at the MIT Innovation Center.  
+      It presents the essence of BIOCERR: a protected invention, born in Brazil, and ready for the world.
+    </p>
+
+    <iframe width="700" height="394" src="https://www.youtube.com/embed/f4K3G6fa_Lk" allowfullscreen></iframe>
+
+    <h2 style="text-align: center; color: #2e7d32; margin-top: 3rem;">🌍 Strategic Mentions and International Networks</h2>
+
+    <ul>
+      <li><span>🌍</span><a class="link" href="https://www.businessforplasticstreaty.org/" target="_blank">Business for Plastics Treaty</a></li>
+
+      <li><span>🌿</span><a class="link" href="https://www.wcef2021.com/" target="_blank">WCEF 2021 — BIOCERR’s presentation at the World Circular Economy Forum</a></li>
+
+      <li><span>🇪🇺</span><a class="link" href="https://count-us-in.com/" target="_blank">European Climate Pact — Count Us In (official site)</a></li>
+      <div class="pdf">📄 <a class="link" href="../video-climate-pact.pdf" target="_blank">See PDF: Business Pledging Workshop (European Commission)</a></div>
+
+      <li><span>📜</span><a class="link" href="https://patentscope.wipo.int/search/en/detail.jsf?docId=BR217855839" target="_blank">WIPO Patentscope — Official registry of the invention</a></li>
+
+      <li><span>🧪</span><a class="link" href="https://www.wipo.int/green/" target="_blank">WIPO GREEN — Platform for sustainable technologies</a></li>
+      <div class="pdf">📄 <a class="link" href="../video-ip-management-clinic.pdf" target="_blank">See PDF: Participation in the IP Management Clinic</a></div>
+
+      <li><span>♻️</span><a class="link" href="https://ellenmacarthurfoundation.org.cn/global-businesses-and-ngos-endorse-a-common-vision" target="_blank">Ellen MacArthur Foundation — Circular economy global charter</a></li>
+
+      <li><span>🌐</span><a class="link" href="https://f6s.com/company/biocerr-biodegradveiscerrado#about" target="_blank">F6S — International profile of BIOCERR</a></li>
+
+      <li><span>🐼</span><a class="link" href="https://wwf.panda.org/es/?6469966/Global-Businesses--NGOs-Endorse-a-Common-Vision-for-an-Ambitious-Global-Plastics-Treaty" target="_blank">WWF — International coalition for a global plastics treaty</a></li>
+    </ul>
+
+    <div style="text-align: center;">
+      <a class="btn-voltar" href="index.html">← Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 BIOCERR — Decentralized Modular Production System (SMPD)
+  </footer>
+
+</body>
+</html>
