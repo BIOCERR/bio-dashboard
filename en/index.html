@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home — BIOCERR</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
     body {
       margin: 0;
@@ -26,6 +26,11 @@
       height: 50px;
     }
 
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
     nav a {
       margin-left: 25px;
       text-decoration: none;
@@ -36,6 +41,18 @@
 
     nav a:hover {
       color: #446600;
+    }
+
+    nav select {
+      margin-left: 25px;
+      padding: 6px 10px;
+      font-weight: 600;
+      color: #6a9b00;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      cursor: pointer;
     }
 
     main {
@@ -86,28 +103,33 @@
 <body>
 
   <header>
-    <img src="../logo.png" alt="BIOCERR Logo" />
+    <img src="../logo.png" alt="BIOCERR Logo"/>
     <nav>
       <a href="index.html">Home</a>
       <a href="manifesto.html">Manifesto</a>
-      <a href="industria-matriz.html">Main Industry</a>
-      <a href="mcefps.html">MCFFPs</a>
+      <a href="industria-matriz.html">Main Factory</a>
+      <a href="mcffps.html">MCFFPs</a>
       <a href="bio-listens.html">BIO Listens</a>
       <a href="pitch.html">Pitch</a>
+      <select onchange="location = this.value;">
+        <option value="en/index.html" selected>EN — English</option>
+        <option value="../index.html">BR — Português</option>
+        <option value="../fr/index.html">FR — Français</option>
+      </select>
     </nav>
   </header>
 
   <main>
     <h1>Disruption is not a path. It’s a calling.</h1>
-    <p>BIOCERR has been developing real solutions for regenerative production since 2015. Our technology is validated, protected, and ready to transform the world.</p>
-    
-    <a class="btn" href="manifesto.html">📜 Read the Manifesto</a>
-    <a class="btn" href="video.html">🎥 Watch the Video</a>
-    <a class="btn" href="simulation.html">🧪 View Simulation</a>
+    <p>Since 2015, BIOCERR has been developing real solutions for the regenerative production of essential goods. Our technology is validated, protected, and ready to transform the world.</p>
+
+    <a class="btn" href="manifesto.html">Read the Manifesto</a>
+    <a class="btn" href="pitch.html">See the Pitch</a>
+    <a class="btn" href="simulation.html">See Simulation</a>
   </main>
 
   <footer>
-    &copy; 2025 BIOCERR — Decentralized Modular Production System (SMPD)
+    &copy; 2025 BIOCERR — Modular System for Decentralized Production (MSDP)
   </footer>
 
 </body>
