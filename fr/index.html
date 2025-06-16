@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accueil — BIOCERR</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f7fdf9;
+      color: #1c1c1c;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #6a9b00;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #446600;
+    }
+
+    .language-select {
+      margin-left: 25px;
+    }
+
+    .language-select select {
+      padding: 6px 10px;
+      font-weight: 600;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      color: #6a9b00;
+    }
+
+    main {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #233a1a;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto 2em auto;
+      color: #555;
+    }
+
+    .btn {
+      background-color: #6a9b00;
+      color: #fff;
+      padding: 14px 28px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .btn:hover {
+      background-color: #446600;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      padding: 30px 20px;
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../logo.png" alt="Logo BIOCERR" />
+    <nav>
+      <a href="manifesto.html">Manifeste</a>
+      <a href="industrie-matrice.html">Industrie Matrice</a>
+      <a href="mcefps.html">MCFFPs</a>
+      <a href="bio-mecoute.html">BIO m'écoute</a>
+      <a href="pitch.html">Pitch</a>
+      <a href="video.html">Vidéo</a>
+      <a href="simulation.html">Simulation</a>
+      <span class="language-select">
+        <select onchange="location = this.value;">
+          <option value="../index.html">BR Português</option>
+          <option value="../en/index.html">EN Inglês</option>
+          <option value="index.html" selected>FR Français</option>
+        </select>
+      </span>
+    </nav>
+  </header>
+
+  <main>
+    <h1>La disruption n’est pas un chemin. C’est un appel.</h1>
+    <p>Depuis 2015, BIOCERR développe des solutions concrètes pour la production régénérative de produits essentiels. Notre technologie est validée, protégée et prête à transformer le monde.</p>
+    <a class="btn" href="manifesto.html">Lire le Manifeste</a>
+    <a class="btn" href="video.html">Voir la Vidéo</a>
+    <a class="btn" href="simulation.html">Voir la Simulation</a>
+  </main>
+
+  <footer>
+    &copy; 2025 BIOCERR — Système Modulaire de Production Décentralisée (SMPD)
+  </footer>
+
+</body>
+</html>
