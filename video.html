@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vídeo — BIOCERR</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
   <style>
     body {
       margin: 0;
@@ -42,42 +42,76 @@
       max-width: 880px;
       margin: 60px auto;
       padding: 0 20px;
-      text-align: center;
     }
 
     h1 {
       font-size: 2.2em;
       color: #233a1a;
-      margin-bottom: 1rem;
+      text-align: center;
     }
 
     p {
       font-size: 1.1em;
       line-height: 1.7;
       color: #444;
-      margin-bottom: 2.5em;
+      text-align: center;
+      margin-bottom: 2em;
     }
 
     iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
+      display: block;
+      margin: 0 auto 40px auto;
+      max-width: 100%;
       border: none;
       border-radius: 10px;
-      margin-bottom: 3em;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 3rem;
+    }
+
+    li {
+      font-size: 1em;
+      margin-bottom: 1.2em;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    li span {
+      margin-right: 10px;
+      font-size: 1.2em;
+    }
+
+    a.link {
+      color: #2e7d32;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    a.link:hover {
+      text-decoration: underline;
+    }
+
+    .pdf {
+      margin-left: 30px;
+      font-size: 0.95em;
+      color: #444;
+      margin-top: -0.8em;
+      margin-bottom: 1.5em;
     }
 
     .btn-voltar {
+      display: inline-block;
       background-color: #6a9b00;
       color: white;
-      padding: 12px 24px;
-      font-size: 1em;
+      padding: 12px 26px;
       text-decoration: none;
       font-weight: 600;
       border-radius: 10px;
-      display: inline-block;
+      transition: background-color 0.3s;
       margin-top: 3rem;
-      transition: background-color 0.3s ease;
     }
 
     .btn-voltar:hover {
@@ -109,14 +143,40 @@
   </header>
 
   <main>
-    <h1>🎥 BIOCERR — Vídeo Oficial com Legendas</h1>
-    <p>Assista à versão oficial em português com legendas.  
-    Uma invenção que nasceu da resistência e agora floresce como missão regenerativa global.</p>
+    <h1>🎥 BIOCERR — Viva, Validada e Pronta</h1>
 
-    <iframe src="https://www.youtube.com/embed/B6QApUnuVfE" allowfullscreen></iframe>
+    <p>
+      Este vídeo foi criado para o processo de seleção da Master Class  
+      do Centro de Inovação do MIT.  
+      Ele apresenta a essência da BIOCERR: uma invenção protegida, nascida no Brasil e pronta para o mundo.
+    </p>
 
-    <div>
-      <a class="btn-voltar" href="index.html">← Voltar para o início</a>
+    <iframe width="700" height="394" src="https://www.youtube.com/embed/B6QApUnuVfE" allowfullscreen></iframe>
+
+    <h2 style="text-align: center; color: #2e7d32; margin-top: 3rem;">🌎 Menções Estratégicas e Redes Internacionais</h2>
+
+    <ul>
+      <li><span>🌍</span><a class="link" href="https://www.businessforplasticstreaty.org/" target="_blank">Business for Plastics Treaty</a></li>
+
+      <li><span>🌿</span><a class="link" href="https://www.wcef2021.com/" target="_blank">WCEF 2021 — Apresentação no Fórum Mundial de Economia Circular</a></li>
+
+      <li><span>🇪🇺</span><a class="link" href="https://count-us-in.com/" target="_blank">Pacto Climático Europeu — Count Us In (site oficial)</a></li>
+      <div class="pdf">📄 <a class="link" href="video-climate-pact.pdf" target="_blank">Ver PDF: Business Pledging Workshop (Comissão Europeia)</a></div>
+
+      <li><span>📜</span><a class="link" href="https://patentscope.wipo.int/search/en/detail.jsf?docId=BR217855839" target="_blank">WIPO Patentscope — Registro oficial da invenção da BIOCERR</a></li>
+
+      <li><span>🧪</span><a class="link" href="https://www.wipo.int/green/" target="_blank">WIPO GREEN — Plataforma de tecnologias sustentáveis</a></li>
+      <div class="pdf">📄 <a class="link" href="video-ip-management-clinic.pdf" target="_blank">Ver PDF: Participação no IP Management Clinic</a></div>
+
+      <li><span>♻️</span><a class="link" href="https://ellenmacarthurfoundation.org.cn/global-businesses-and-ngos-endorse-a-common-vision" target="_blank">Fundação Ellen MacArthur — Carta global pela economia circular</a></li>
+
+      <li><span>🌐</span><a class="link" href="https://f6s.com/company/biocerr-biodegradveiscerrado#about" target="_blank">F6S — Perfil internacional da BIOCERR</a></li>
+
+      <li><span>🐼</span><a class="link" href="https://wwf.panda.org/es/?6469966/Global-Businesses--NGOs-Endorse-a-Common-Vision-for-an-Ambitious-Global-Plastics-Treaty" target="_blank">WWF — Coalizão internacional por tratado global de plásticos</a></li>
+    </ul>
+
+    <div style="text-align: center;">
+      <a class="btn-voltar" href="index.html">← Voltar ao Início</a>
     </div>
   </main>
 
