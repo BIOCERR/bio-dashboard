@@ -22,12 +22,22 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
     header img {
       height: 50px;
     }
 
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
     nav a {
-      margin-left: 25px;
       text-decoration: none;
       font-weight: 600;
       color: #6a9b00;
@@ -38,10 +48,6 @@
       color: #446600;
     }
 
-    .language-select {
-      margin-left: 25px;
-    }
-
     .language-select select {
       padding: 6px 10px;
       font-weight: 600;
@@ -49,6 +55,7 @@
       border: 1px solid #ccc;
       background-color: #fff;
       color: #6a9b00;
+      cursor: pointer;
     }
 
     main {
@@ -100,14 +107,15 @@
 
   <header>
     <img src="../logo.png" alt="Logo BIOCERR" />
-    <nav>
-      <a href="manifesto.html">Manifeste</a>
-      <a href="industrie-matrice.html">Industrie Matrice</a>
-      <a href="mcefps.html">MCFFPs</a>
-      <a href="bio-mecoute.html">BIO m'écoute</a>
-      <a href="pitch.html">Pitch</a>
-      <a href="video.html">Vidéo</a>
-      <a href="simulation.html">Simulation</a>
+    <div class="header-right">
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="manifesto.html">Manifeste</a>
+        <a href="industrie-matrice.html">Industrie Matrice</a>
+        <a href="mcefps.html">MCEFPs</a>
+        <a href="bio-mecoute.html">BIO m'écoute</a>
+        <a href="pitch.html">Pitch</a>
+      </nav>
       <span class="language-select">
         <select onchange="location = this.value;">
           <option value="../index.html">BR Português</option>
@@ -115,14 +123,14 @@
           <option value="index.html" selected>FR Français</option>
         </select>
       </span>
-    </nav>
+    </div>
   </header>
 
   <main>
     <h1>La disruption n’est pas un chemin. C’est un appel.</h1>
     <p>Depuis 2015, BIOCERR développe des solutions concrètes pour la production régénérative de produits essentiels. Notre technologie est validée, protégée et prête à transformer le monde.</p>
     <a class="btn" href="manifesto.html">Lire le Manifeste</a>
-    <a class="btn" href="video.html">Voir la Vidéo</a>
+    <a class="btn" href="pitch.html">Voir le Pitch</a>
     <a class="btn" href="simulation.html">Voir la Simulation</a>
   </main>
 
