@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel da BIO — BIOCERR</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f7fdf9;
+      color: #1c1c1c;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #6a9b00;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #446600;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 2.3em;
+      color: #233a1a;
+      text-align: center;
+    }
+
+    p.subtitle {
+      font-size: 1.2em;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #444;
+    }
+
+    .panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      padding: 20px 30px;
+    }
+
+    .card h3 {
+      color: #446600;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1em;
+      color: #333;
+    }
+
+    .mandala {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .mandala img {
+      max-width: 280px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(106, 155, 0, 0.4);
+    }
+
+    .btn-voltar {
+      display: inline-block;
+      background-color: #6a9b00;
+      color: white;
+      padding: 14px 28px;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+      text-align: center;
+    }
+
+    .btn-voltar:hover {
+      background-color: #446600;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      padding: 30px 20px;
+      background-color: #f2f2f2;
+    }
+
+    @media (max-width: 768px) {
+      .panel {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo da BIOCERR" />
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="industria-matriz.html">Indústria Matriz</a>
+      <a href="mcefps.html">MCEFPs</a>
+      <a href="bio-me-escuta.html">BIO me escuta</a>
+      <a href="pitch.html">Pitch</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>🌐 Painel de Integração da BIO</h1>
+    <p class="subtitle">“Cada território escutado é um elo restaurado. A BIO está presente onde a reparação é urgente.”</p>
+
+    <div class="mandala">
+      <img src="registro-mandala.png" alt="Mandala BIO" />
+    </div>
+
+    <div class="panel">
+      <div class="card">
+        <h3>📍 Unidades Ativas (MCEFPs)</h3>
+        <p>Zona Rural — Ciclo finalizado com sucesso<br>Hospital Público — Em processo de finalização<br>Mercado Local — Coleta de retornáveis em andamento</p>
+      </div>
+
+      <div class="card">
+        <h3>🔄 Ciclo Atual</h3>
+        <p>Produção → Enchimento → Finalização → Distribuição → Retorno</p>
+      </div>
+
+      <div class="card">
+        <h3>📡 Indústria Matriz</h3>
+        <p>Operação contínua. Conectada às MCEFPs. Capacidade de expansão pronta.</p>
+      </div>
+
+      <div class="card">
+        <h3>💬 BIO diz:</h3>
+        <p>“Um lote bem feito não limpa só a casa. Limpa também o passado.”</p>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a class="btn-voltar" href="bio-me-escuta.html">← Voltar para BIO me escuta</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 BIOCERR — Sistema Modular de Produção Descentralizada (SMPD)
+  </footer>
+
+</body>
+</html>
