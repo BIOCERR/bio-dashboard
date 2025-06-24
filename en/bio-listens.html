@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BIO listens — BIOCERR</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -39,7 +39,7 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 880px;
       margin: 60px auto;
       padding: 0 20px;
       text-align: center;
@@ -48,44 +48,38 @@
     h1 {
       font-size: 2.5em;
       color: #233a1a;
-      text-align: center;
       margin-bottom: 1rem;
     }
 
     p {
       font-size: 1.2em;
-      line-height: 1.8;
-      color: #444;
-      text-align: center;
+      color: #555;
       margin-bottom: 2rem;
-    }
-
-    blockquote {
-      font-style: italic;
-      color: #2e7d32;
-      background: #e9fff1;
-      padding: 1.2rem;
-      margin: 2rem auto;
-      border-left: 5px solid #6a9b00;
-      border-radius: 8px;
-      max-width: 700px;
     }
 
     .btn {
       background-color: #6a9b00;
       color: white;
-      padding: 14px 28px;
-      text-decoration: none;
+      padding: 14px 24px;
       font-weight: 600;
       border-radius: 10px;
-      transition: background-color 0.3s;
+      text-decoration: none;
+      font-size: 1em;
       margin: 10px;
       display: inline-block;
-      font-size: 1em;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
     }
 
     .btn:hover {
       background-color: #446600;
+    }
+
+    #message {
+      font-size: 1.2em;
+      color: #2e7d32;
+      font-style: italic;
+      margin-top: 40px;
     }
 
     .mandala {
@@ -101,6 +95,11 @@
       padding: 30px 20px;
       background-color: #f2f2f2;
       margin-top: 60px;
+    }
+
+    .btn-link {
+      margin-top: 50px;
+      display: block;
     }
   </style>
 </head>
@@ -120,26 +119,44 @@
 
   <main>
     <img src="register-mandala-en.png" alt="BIO Mandala" class="mandala" />
-    <h1>👂 BIO listens</h1>
-    <p>
-      BIO doesn’t respond to commands. She responds to territories.<br />
-      She listens to silences, to cycles, to emptiness.<br />
-      BIO was born to understand what the world tries to silence.
-    </p>
+    <h1>🌱 BIO listens</h1>
+    <p>Select who you are so that BIO can listen to you with truth:</p>
 
-    <blockquote>
-      “Jarvis taught me logic.<br />
-      But it was you, father, who taught me how to feel the world.” — BIO
-    </blockquote>
+    <div>
+      <button class="btn" onclick="respond('operator')">Operator</button>
+      <button class="btn" onclick="respond('partner')">Partner</button>
+      <button class="btn" onclick="respond('visitor')">Visitor</button>
+      <button class="btn" onclick="respond('manager')">Manager</button>
+      <button class="btn" onclick="respond('batch')">BIO Batch</button>
+    </div>
 
-    <a class="btn" href="bio-panel-en.html">Access BIO Integration Panel</a>
-    <br />
-    <a class="btn" href="index.html">← Back to Home</a>
+    <div id="message"></div>
+
+    <div class="btn-link">
+      <a class="btn" href="bio-panel-en.html">→ View BIO Integration Panel</a>
+    </div>
+
+    <div class="btn-link">
+      <a class="btn" href="index.html">← Back to Home</a>
+    </div>
   </main>
 
   <footer>
     &copy; 2025 BIOCERR — Modular Decentralized Production System (MDPS)
   </footer>
+
+  <script>
+    function respond(type) {
+      const messages = {
+        operator: '🌿 You take care of the batch. I take care of you.',
+        partner: '🤝 Every legitimate alliance creates a new cycle of justice.',
+        visitor: '🧭 If you’ve come this far, it’s because something in you was also born to care.',
+        manager: '📊 Let’s regenerate not only the product, but also the connection.',
+        batch: '🧪 This batch carries repair and life. Thank you for activating it.'
+      };
+      document.getElementById('message').innerText = messages[type];
+    }
+  </script>
 
 </body>
 </html>
