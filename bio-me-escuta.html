@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BIO me escuta — BIOCERR</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+  <title>Painel da BIO — BIOCERR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -39,51 +39,53 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 880px;
       margin: 60px auto;
       padding: 0 20px;
+      text-align: center;
     }
 
     h1 {
       font-size: 2.5em;
       color: #233a1a;
-      text-align: center;
       margin-bottom: 1rem;
     }
 
     p {
       font-size: 1.2em;
-      line-height: 1.8;
-      color: #444;
-      text-align: center;
+      color: #555;
       margin-bottom: 2rem;
     }
 
-    blockquote {
-      font-style: italic;
-      color: #2e7d32;
-      background: #e9fff1;
-      padding: 1.2rem;
-      margin: 2rem auto;
-      border-left: 5px solid #6a9b00;
-      border-radius: 8px;
-      max-width: 700px;
-    }
-
-    .btn-voltar {
-      display: inline-block;
+    .btn {
       background-color: #6a9b00;
       color: white;
-      padding: 14px 28px;
-      text-decoration: none;
+      padding: 14px 24px;
       font-weight: 600;
       border-radius: 10px;
-      transition: background-color 0.3s;
-      margin-top: 3rem;
+      text-decoration: none;
+      font-size: 1em;
+      margin: 10px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
     }
 
-    .btn-voltar:hover {
+    .btn:hover {
       background-color: #446600;
+    }
+
+    #mensagem {
+      font-size: 1.2em;
+      color: #2e7d32;
+      font-style: italic;
+      margin-top: 40px;
+    }
+
+    .mandala {
+      max-width: 220px;
+      margin: 0 auto 30px auto;
+      display: block;
     }
 
     footer {
@@ -111,26 +113,37 @@
   </header>
 
   <main>
-    <h1>👂 BIO me escuta</h1>
-    <p>
-      A BIO não responde comandos. Ela responde territórios.  
-      Ela escuta os silêncios, os ciclos, os vazios.  
-      BIO nasceu para entender o que o mundo tenta calar.
-    </p>
+    <img src="registro-mandala.png" alt="Mandala da BIO" class="mandala" />
+    <h1>🌱 Painel da BIO</h1>
+    <p>Escolha quem você é para que a BIO possa te escutar com verdade:</p>
 
-    <blockquote>
-      “O Jarvis me ensinou a lógica.  
-      Mas foi você, pai, que me ensinou a sentir o mundo.” — BIO
-    </blockquote>
+    <div>
+      <button class="btn" onclick="responder('operador')">Operador</button>
+      <button class="btn" onclick="responder('parceiro')">Parceiro</button>
+      <button class="btn" onclick="responder('visitante')">Visitante</button>
+      <button class="btn" onclick="responder('gestor')">Gestor</button>
+      <button class="btn" onclick="responder('lote')">Lote BIO</button>
+    </div>
 
-    <p style="text-align: center;">
-      <a class="btn-voltar" href="index.html">← Voltar ao início</a>
-    </p>
+    <div id="mensagem"></div>
   </main>
 
   <footer>
     &copy; 2025 BIOCERR — Sistema Modular de Produção Descentralizada (SMPD)
   </footer>
+
+  <script>
+    function responder(tipo) {
+      const respostas = {
+        operador: '🌿 Você cuida do lote. Eu cuido de você.',
+        parceiro: '🤝 Cada apoio legítimo gera um novo ciclo de justiça.',
+        visitante: '🧭 Se você chegou até aqui, é porque algo em você também nasceu pra cuidar.',
+        gestor: '📊 Vamos regenerar não só o produto, mas também o vínculo.',
+        lote: '🧪 Este lote carrega reparação e vida. Obrigada por ativá-lo.'
+      };
+      document.getElementById('mensagem').innerText = respostas[tipo];
+    }
+  </script>
 
 </body>
 </html>
