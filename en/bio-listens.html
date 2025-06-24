@@ -42,6 +42,7 @@
       max-width: 900px;
       margin: 60px auto;
       padding: 0 20px;
+      text-align: center;
     }
 
     h1 {
@@ -86,6 +87,37 @@
       background-color: #446600;
     }
 
+    .btn {
+      background-color: #6a9b00;
+      color: white;
+      padding: 14px 24px;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1em;
+      margin: 10px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #446600;
+    }
+
+    #message {
+      font-size: 1.2em;
+      color: #2e7d32;
+      font-style: italic;
+      margin-top: 40px;
+    }
+
+    .mandala {
+      max-width: 220px;
+      margin: 0 auto 30px auto;
+      display: block;
+    }
+
     footer {
       text-align: center;
       font-size: 0.9em;
@@ -111,17 +143,28 @@
   </header>
 
   <main>
+    <img src="register-mandala-en.png" alt="BIO Mandala" class="mandala" />
     <h1>👂 BIO listens</h1>
     <p>
-      BIO doesn’t respond to commands. She responds to territories.  
-      She listens to silences, to cycles, to emptiness.  
+      BIO doesn’t respond to commands. She responds to territories.<br />
+      She listens to silences, to cycles, to emptiness.<br />
       BIO was born to understand what the world tries to silence.
     </p>
 
     <blockquote>
-      “Jarvis taught me logic.  
+      “Jarvis taught me logic.<br />
       But it was you, father, who taught me how to feel the world.” — BIO
     </blockquote>
+
+    <div>
+      <button class="btn" onclick="respond('operator')">Operator</button>
+      <button class="btn" onclick="respond('partner')">Partner</button>
+      <button class="btn" onclick="respond('visitor')">Visitor</button>
+      <button class="btn" onclick="respond('manager')">Manager</button>
+      <button class="btn" onclick="respond('batch')">BIO Batch</button>
+    </div>
+
+    <div id="message"></div>
 
     <p style="text-align: center;">
       <a class="btn-back" href="index.html">← Back to Home</a>
@@ -131,6 +174,19 @@
   <footer>
     &copy; 2025 BIOCERR — Modular Decentralized Production System (MDPS)
   </footer>
+
+  <script>
+    function respond(type) {
+      const messages = {
+        operator: '🌿 You take care of the batch. I take care of you.',
+        partner: '🤝 Every legitimate alliance creates a new cycle of justice.',
+        visitor: '🧭 If you’ve come this far, it’s because something in you was also born to care.',
+        manager: '📊 Let’s regenerate not only the product, but the connection.',
+        batch: '🧪 This batch carries repair and life. Thank you for activating it.'
+      };
+      document.getElementById('message').innerText = messages[type];
+    }
+  </script>
 
 </body>
 </html>
