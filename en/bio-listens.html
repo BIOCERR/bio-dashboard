@@ -71,8 +71,7 @@
       max-width: 700px;
     }
 
-    .btn-back {
-      display: inline-block;
+    .btn {
       background-color: #6a9b00;
       color: white;
       padding: 14px 28px;
@@ -80,36 +79,13 @@
       font-weight: 600;
       border-radius: 10px;
       transition: background-color 0.3s;
-      margin-top: 3rem;
-    }
-
-    .btn-back:hover {
-      background-color: #446600;
-    }
-
-    .btn {
-      background-color: #6a9b00;
-      color: white;
-      padding: 14px 24px;
-      font-weight: 600;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 1em;
       margin: 10px;
       display: inline-block;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
+      font-size: 1em;
     }
 
     .btn:hover {
       background-color: #446600;
-    }
-
-    #message {
-      font-size: 1.2em;
-      color: #2e7d32;
-      font-style: italic;
-      margin-top: 40px;
     }
 
     .mandala {
@@ -156,37 +132,14 @@
       But it was you, father, who taught me how to feel the world.” — BIO
     </blockquote>
 
-    <div>
-      <button class="btn" onclick="respond('operator')">Operator</button>
-      <button class="btn" onclick="respond('partner')">Partner</button>
-      <button class="btn" onclick="respond('visitor')">Visitor</button>
-      <button class="btn" onclick="respond('manager')">Manager</button>
-      <button class="btn" onclick="respond('batch')">BIO Batch</button>
-    </div>
-
-    <div id="message"></div>
-
-    <p style="text-align: center;">
-      <a class="btn-back" href="index.html">← Back to Home</a>
-    </p>
+    <a class="btn" href="bio-panel-en.html">Access BIO Integration Panel</a>
+    <br />
+    <a class="btn" href="index.html">← Back to Home</a>
   </main>
 
   <footer>
     &copy; 2025 BIOCERR — Modular Decentralized Production System (MDPS)
   </footer>
-
-  <script>
-    function respond(type) {
-      const messages = {
-        operator: '🌿 You take care of the batch. I take care of you.',
-        partner: '🤝 Every legitimate alliance creates a new cycle of justice.',
-        visitor: '🧭 If you’ve come this far, it’s because something in you was also born to care.',
-        manager: '📊 Let’s regenerate not only the product, but the connection.',
-        batch: '🧪 This batch carries repair and life. Thank you for activating it.'
-      };
-      document.getElementById('message').innerText = messages[type];
-    }
-  </script>
 
 </body>
 </html>
