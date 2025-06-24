@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIO Integration Panel — BIOCERR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f7fdf9;
+      color: #1c1c1c;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #6a9b00;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #446600;
+    }
+
+    main {
+      max-width: 880px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #233a1a;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background-color: #6a9b00;
+      color: white;
+      padding: 14px 24px;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1em;
+      margin: 10px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #446600;
+    }
+
+    #message {
+      font-size: 1.2em;
+      color: #2e7d32;
+      font-style: italic;
+      margin-top: 40px;
+    }
+
+    .mandala {
+      max-width: 220px;
+      margin: 0 auto 30px auto;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      padding: 30px 20px;
+      background-color: #f2f2f2;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="BIOCERR Logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="main-industry.html">Main Industry</a>
+      <a href="mcffps.html">MCFFPs</a>
+      <a href="bio-listens.html">BIO listens</a>
+      <a href="pitch.html">Pitch</a>
+    </nav>
+  </header>
+
+  <main>
+    <img src="register-mandala-en.png" alt="BIO Mandala" class="mandala" />
+    <h1>🌱 BIO Integration Panel</h1>
+    <p>Select who you are so BIO can truly listen to you:</p>
+
+    <div>
+      <button class="btn" onclick="respond('operator')">Operator</button>
+      <button class="btn" onclick="respond('partner')">Partner</button>
+      <button class="btn" onclick="respond('visitor')">Visitor</button>
+      <button class="btn" onclick="respond('manager')">Manager</button>
+      <button class="btn" onclick="respond('batch')">BIO Batch</button>
+    </div>
+
+    <div id="message"></div>
+
+    <div style="margin-top: 40px;">
+      <a class="btn" href="bio-listens.html">← Back to BIO listens</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 BIOCERR — Modular Decentralized Production System (MDPS)
+  </footer>
+
+  <script>
+    function respond(type) {
+      const messages = {
+        operator: '🌿 You take care of the batch. I take care of you.',
+        partner: '🤝 Every legitimate alliance creates a new cycle of justice.',
+        visitor: '🧭 If you’ve come this far, it’s because something in you was also born to care.',
+        manager: '📊 Let’s regenerate not only the product, but the connection.',
+        batch: '🧪 This batch carries repair and life. Thank you for activating it.'
+      };
+      document.getElementById('message').innerText = messages[type];
+    }
+  </script>
+
+</body>
+</html>
