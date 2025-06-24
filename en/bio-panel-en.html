@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BIO Integration Panel — BIOCERR</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
   <style>
     body {
       margin: 0;
@@ -39,53 +39,75 @@
     }
 
     main {
-      max-width: 880px;
+      max-width: 1000px;
       margin: 60px auto;
       padding: 0 20px;
-      text-align: center;
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 2.3em;
       color: #233a1a;
-      margin-bottom: 1rem;
+      text-align: center;
     }
 
-    p {
+    p.subtitle {
       font-size: 1.2em;
-      color: #555;
-      margin-bottom: 2rem;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #444;
     }
 
-    .btn {
-      background-color: #6a9b00;
-      color: white;
-      padding: 14px 24px;
-      font-weight: 600;
-      border-radius: 10px;
-      text-decoration: none;
+    .panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      padding: 20px 30px;
+    }
+
+    .card h3 {
+      color: #446600;
+      margin-bottom: 10px;
+    }
+
+    .card p {
       font-size: 1em;
-      margin: 10px;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background-color: #446600;
-    }
-
-    #message {
-      font-size: 1.2em;
-      color: #2e7d32;
-      font-style: italic;
-      margin-top: 40px;
+      color: #333;
     }
 
     .mandala {
-      max-width: 220px;
-      margin: 0 auto 30px auto;
-      display: block;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .mandala img {
+      max-width: 280px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(106, 155, 0, 0.4);
+    }
+
+    .btn-back {
+      display: inline-block;
+      background-color: #6a9b00;
+      color: white;
+      padding: 14px 28px;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+      text-align: center;
+    }
+
+    .btn-back:hover {
+      background-color: #446600;
     }
 
     footer {
@@ -94,7 +116,12 @@
       color: #888;
       padding: 30px 20px;
       background-color: #f2f2f2;
-      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .panel {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -113,41 +140,43 @@
   </header>
 
   <main>
-    <img src="register-mandala-en.png" alt="BIO Mandala" class="mandala" />
-    <h1>🌱 BIO Integration Panel</h1>
-    <p>Select who you are so BIO can truly listen to you:</p>
+    <h1>🌐 BIO Integration Panel</h1>
+    <p class="subtitle">“Every territory heard is a restored link. BIO is present where repair is urgent.”</p>
 
-    <div>
-      <button class="btn" onclick="respond('operator')">Operator</button>
-      <button class="btn" onclick="respond('partner')">Partner</button>
-      <button class="btn" onclick="respond('visitor')">Visitor</button>
-      <button class="btn" onclick="respond('manager')">Manager</button>
-      <button class="btn" onclick="respond('batch')">BIO Batch</button>
+    <div class="mandala">
+      <img src="register-mandala-en.png" alt="BIO Mandala" />
     </div>
 
-    <div id="message"></div>
+    <div class="panel">
+      <div class="card">
+        <h3>📍 Active Units (MCFFPs)</h3>
+        <p>Rural Zone — Cycle successfully completed<br>Public Hospital — In finalization stage<br>Local Market — Returnables collection ongoing</p>
+      </div>
 
-    <div style="margin-top: 40px;">
-      <a class="btn" href="bio-listens.html">← Back to BIO listens</a>
+      <div class="card">
+        <h3>🔄 Current Cycle</h3>
+        <p>Production → Filling → Finalization → Distribution → Return</p>
+      </div>
+
+      <div class="card">
+        <h3>📡 Main Industry</h3>
+        <p>Continuous operation. Connected to the MCFFPs. Expansion-ready infrastructure.</p>
+      </div>
+
+      <div class="card">
+        <h3>💬 BIO says:</h3>
+        <p>“A well-made batch doesn’t just clean the house. It also cleans the past.”</p>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a class="btn-back" href="bio-listens.html">← Back to BIO listens</a>
     </div>
   </main>
 
   <footer>
     &copy; 2025 BIOCERR — Modular Decentralized Production System (MDPS)
   </footer>
-
-  <script>
-    function respond(type) {
-      const messages = {
-        operator: '🌿 You take care of the batch. I take care of you.',
-        partner: '🤝 Every legitimate alliance creates a new cycle of justice.',
-        visitor: '🧭 If you’ve come this far, it’s because something in you was also born to care.',
-        manager: '📊 Let’s regenerate not only the product, but the connection.',
-        batch: '🧪 This batch carries repair and life. Thank you for activating it.'
-      };
-      document.getElementById('message').innerText = messages[type];
-    }
-  </script>
 
 </body>
 </html>
