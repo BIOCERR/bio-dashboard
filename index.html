@@ -29,10 +29,10 @@
     nav {
       display: flex;
       align-items: center;
+      gap: 25px;
     }
 
     nav a {
-      margin-left: 25px;
       text-decoration: none;
       font-weight: 600;
       color: #6a9b00;
@@ -44,7 +44,6 @@
     }
 
     nav select {
-      margin-left: 25px;
       padding: 6px 10px;
       font-weight: 600;
       color: #6a9b00;
@@ -53,6 +52,19 @@
       font-family: 'Inter', sans-serif;
       background-color: #fff;
       cursor: pointer;
+    }
+
+    .contact-info {
+      margin-left: 40px;
+      text-align: right;
+      font-size: 0.85em;
+      color: #6a9b00;
+      line-height: 1.4;
+    }
+
+    .contact-info a {
+      color: #6a9b00;
+      text-decoration: none;
     }
 
     main {
@@ -104,30 +116,38 @@
 
   <header>
     <img src="logo.png" alt="Logo da BIOCERR"/>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="manifesto.html">Manifesto</a>
-      <a href="industria-matriz.html">Indústria Matriz</a>
-      <a href="mcefps.html">MCEFPs</a>
-      <a href="bio-me-escuta.html">BIO me escuta</a>
-      <a href="pitch.html">Pitch</a>
-      <select onchange="location = this.value;">
-        <option value="index.html" selected>BR — Português</option>
-        <option value="en/index.html">EN — Inglês</option>
-        <option value="fr/index.html">FR — Français</option>
-      </select>
-    </nav>
+    <div style="display: flex; align-items: center;">
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="industria-matriz.html">Indústria Matriz</a>
+        <a href="mcefps.html">MCEFPs</a>
+        <a href="bio-me-escuta.html">BIO me escuta</a>
+        <a href="pitch.html">Pitch</a>
+        <select onchange="location = this.value;">
+          <option value="index.html" selected>BR — Português</option>
+          <option value="en/index.html">EN — Inglês</option>
+          <option value="fr/index.html">FR — Français</option>
+        </select>
+      </nav>
+
+      <!-- ✅ Contato alinhado à direita -->
+      <div class="contact-info">
+        <strong>Contato</strong><br />
+        <a href="mailto:biocerr@hotmail.com">biocerr@hotmail.com</a>
+      </div>
+    </div>
   </header>
 
   <main>
-  <h1>Disrupção não é um caminho. É um chamado.</h1>
-  <p>Desde 2015, a BIOCERR desenvolve soluções reais para a produção regenerativa de produtos essenciais. Nossa tecnologia é validada, protegida e pronta para transformar o mundo.</p>
+    <h1>Disrupção não é um caminho. É um chamado.</h1>
+    <p>Desde 2015, a BIOCERR desenvolve soluções reais para a produção regenerativa de produtos essenciais. Nossa tecnologia é validada, protegida e pronta para transformar o mundo.</p>
 
-  <a class="btn" href="manifesto.html">Ler o Manifesto</a>
-  <a class="btn" href="pitch.html">Ver o Pitch</a>
-  <a class="btn" href="simulacoes.html">Ver Simulação</a>
-  <a class="btn" href="https://bio-nuvem.vercel.app" target="_blank">☁️ Acessar Nuvem BIO</a> <!-- ✅ agora com o caminho certo -->
-</main>
+    <a class="btn" href="manifesto.html">Ler o Manifesto</a>
+    <a class="btn" href="pitch.html">Ver o Pitch</a>
+    <a class="btn" href="simulacoes.html">Ver Simulação</a>
+    <a class="btn" href="https://bio-nuvem.vercel.app" target="_blank">☁️ Acessar Nuvem BIO</a>
+  </main>
 
   <footer>
     &copy; 2025 BIOCERR — Sistema Modular de Produção Descentralizada (SMPD)
@@ -135,3 +155,5 @@
 
 </body>
 </html>
+
+
