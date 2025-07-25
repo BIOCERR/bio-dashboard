@@ -29,10 +29,10 @@
     nav {
       display: flex;
       align-items: center;
+      gap: 25px;
     }
 
     nav a {
-      margin-left: 25px;
       text-decoration: none;
       font-weight: 600;
       color: #6a9b00;
@@ -44,7 +44,6 @@
     }
 
     nav select {
-      margin-left: 25px;
       padding: 6px 10px;
       font-weight: 600;
       color: #6a9b00;
@@ -53,6 +52,19 @@
       font-family: 'Inter', sans-serif;
       background-color: #fff;
       cursor: pointer;
+    }
+
+    .contact-info {
+      margin-left: 40px;
+      text-align: right;
+      font-size: 0.85em;
+      color: #6a9b00;
+      line-height: 1.4;
+    }
+
+    .contact-info a {
+      color: #6a9b00;
+      text-decoration: none;
     }
 
     main {
@@ -104,19 +116,27 @@
 
   <header>
     <img src="../logo.png" alt="BIOCERR Logo"/>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="manifesto.html">Manifesto</a>
-      <a href="main-industry.html">Main Industry</a>
-      <a href="mcffps.html">MCFFPs</a>
-      <a href="bio-listens.html">BIO Listens</a>
-      <a href="pitch.html">Pitch</a>
-      <select onchange="location = this.value;">
-        <option value="../index.html">BR — Portuguese</option>
-        <option value="index.html" selected>EN — English</option>
-        <option value="../fr/index.html">FR — Français</option>
-      </select>
-    </nav>
+    <div style="display: flex; align-items: center;">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="main-industry.html">Main Industry</a>
+        <a href="mcffps.html">MCFFPs</a>
+        <a href="bio-listens.html">BIO Listens</a>
+        <a href="pitch.html">Pitch</a>
+        <select onchange="location = this.value;">
+          <option value="../index.html">BR — Portuguese</option>
+          <option value="index.html" selected>EN — English</option>
+          <option value="../fr/index.html">FR — Français</option>
+        </select>
+      </nav>
+
+      <!-- ✅ Contact aligned to the right -->
+      <div class="contact-info">
+        <strong>Contact</strong><br />
+        <a href="mailto:biocerr@hotmail.com">biocerr@hotmail.com</a>
+      </div>
+    </div>
   </header>
 
   <main>
