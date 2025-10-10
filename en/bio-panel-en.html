@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BIO Integration Panel — BIOCERR</title>
+  <title>BIO Panel — BIOCERR</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
   <style>
     body {
@@ -91,7 +91,7 @@
       max-width: 280px;
       width: 100%;
       border-radius: 12px;
-      /* shadow removed */
+      box-shadow: 0 0 8px rgba(106, 155, 0, 0.4);
     }
 
     .btn-back {
@@ -104,6 +104,7 @@
       border-radius: 10px;
       transition: background-color 0.3s;
       text-align: center;
+      margin: 8px;
     }
 
     .btn-back:hover {
@@ -131,11 +132,13 @@
     <img src="logo.png" alt="BIOCERR Logo" />
     <nav>
       <a href="index.html">Home</a>
-      <a href="manifesto.html">Manifesto</a>
+      <a href="manifesto.html">Manifest</a>
       <a href="main-industry.html">Main Industry</a>
       <a href="mcffps.html">MCFFPs</a>
       <a href="bio-listens.html">BIO listens</a>
       <a href="pitch.html">Pitch</a>
+      <!-- new button in the menu that leads to the BIO2_Panel -->
+      <a href="BIO_Panel2.html" title="Open BIO Panel">BIO Panel</a>
     </nav>
   </header>
 
@@ -171,6 +174,8 @@
 
     <div style="text-align: center; margin-top: 40px;">
       <a class="btn-back" href="bio-listens.html">← Back to BIO listens</a>
+      <!-- additional button that leads to the BIO2_Dashboard -->
+      <a class="btn-back" href="BIO_Panel2.html">→ Open BIO Panel</a>
     </div>
   </main>
 
